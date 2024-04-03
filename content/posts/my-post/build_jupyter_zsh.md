@@ -1,9 +1,11 @@
 +++
 title = '使用MacOS为本地及服务器配置jupyter及zsh'
-date = 2024-04-02T22:56:20+08:00
-draft = true
+date = 2024-04-03T15:40:20+08:00
+draft = false
 +++
 # 如何配置jupyter及zsh
+
+> 本文转载自
 
 ## Why this？
 

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Blowfish</title>
-    <link>http://localhost:1313/en/posts/</link>
+    <link>https://witchcraft-jasper.github.io/en/posts/</link>
     <description>Recent content in Posts on Blowfish</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 Blowfish</copyright>
-    <lastBuildDate>Tue, 02 Apr 2024 22:56:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Apr 2024 15:40:20 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuring Jupyter and zsh for Local and Server Environments on MacOS</title>
-      <link>http://localhost:1313/en/posts/my-post/build_jupyter_zsh/</link>
-      <pubDate>Tue, 02 Apr 2024 22:56:20 +0800</pubDate>
+      <link>https://witchcraft-jasper.github.io/en/posts/my-post/build_jupyter_zsh/</link>
+      <pubDate>Wed, 03 Apr 2024 15:40:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/posts/my-post/build_jupyter_zsh/</guid>
+      <guid>https://witchcraft-jasper.github.io/en/posts/my-post/build_jupyter_zsh/</guid>
       <description>How to Configure Jupyter and zsh # This page is translated by GPT-4</description>
       
     </item>

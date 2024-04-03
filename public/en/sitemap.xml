@@ -3,51 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/en/</loc>
-    <lastmod>2024-04-02T22:56:20+08:00</lastmod>
+    <loc>https://witchcraft-jasper.github.io/en/</loc>
+    <lastmod>2024-04-03T15:40:20+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/"
+      href="https://witchcraft-jasper.github.io/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/"
+      href="https://witchcraft-jasper.github.io/en/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/en/posts/my-post/build_jupyter_zsh/</loc>
-    <lastmod>2024-04-02T22:56:20+08:00</lastmod>
+    <loc>https://witchcraft-jasper.github.io/en/posts/my-post/build_jupyter_zsh/</loc>
+    <lastmod>2024-04-03T15:40:20+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/posts/my-post/build_jupyter_zsh/"
+      href="https://witchcraft-jasper.github.io/posts/my-post/build_jupyter_zsh/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/posts/my-post/build_jupyter_zsh/"
+      href="https://witchcraft-jasper.github.io/en/posts/my-post/build_jupyter_zsh/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/en/posts/</loc>
-    <lastmod>2024-04-02T22:56:20+08:00</lastmod>
+    <loc>https://witchcraft-jasper.github.io/en/posts/</loc>
+    <lastmod>2024-04-03T15:40:20+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/posts/"
+      href="https://witchcraft-jasper.github.io/posts/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/posts/"
+      href="https://witchcraft-jasper.github.io/en/posts/"
     />
   </url>
 </urlset>

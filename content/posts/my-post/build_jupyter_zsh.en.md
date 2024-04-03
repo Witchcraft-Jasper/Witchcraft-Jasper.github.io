@@ -1,7 +1,7 @@
 +++
 title = 'Configuring Jupyter and zsh for Local and Server Environments on MacOS'
-date = 2024-04-02T22:56:20+08:00
-draft = true
+date = 2024-04-03T15:40:20+08:00
+draft = false
 +++
 # How to Configure Jupyter and zsh
 
