@@ -3,22 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://witchcraft-jasper.github.io/en/</loc>
-    <lastmod>2024-04-03T15:40:20+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="https://witchcraft-jasper.github.io/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://witchcraft-jasper.github.io/en/"
-    />
-  </url>
-  <url>
     <loc>https://witchcraft-jasper.github.io/en/posts/my-post/build_jupyter_zsh/</loc>
     <lastmod>2024-04-03T15:40:20+08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -48,6 +32,22 @@
       rel="alternate"
       hreflang="en"
       href="https://witchcraft-jasper.github.io/en/posts/"
+    />
+  </url>
+  <url>
+    <loc>https://witchcraft-jasper.github.io/en/</loc>
+    <lastmod>2024-04-03T15:40:20+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="https://witchcraft-jasper.github.io/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://witchcraft-jasper.github.io/en/"
     />
   </url>
 </urlset>

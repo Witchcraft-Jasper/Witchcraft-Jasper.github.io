@@ -7,6 +7,8 @@ draft = false
 
 > This page is translated by GPT-4
 
+> This article is a reprint of a setup guide I wrote during my internship, and the content has been anonymized.
+
 ## Why this？
 
 Jupyter Lab is a web-based interactive development environment that allows users to edit, run, and share code visually. Users can execute code step by step, which is suitable for tasks such as data analysis, scientific computing, machine learning, etc. Especially for data processing tasks like PySpark, using Jupyter displays the results of each process, facilitating a deeper understanding of data processing and code learning.
