@@ -5,6 +5,7 @@ draft = false
 tags = ["测试", "Markdown"]
 series = ["测试用内容"]
 series_order = 1
+heroStyle = "background"
 +++
 
 ## 你好，世界！
