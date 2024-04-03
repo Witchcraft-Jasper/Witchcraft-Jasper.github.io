@@ -10,7 +10,7 @@ heroStyle = "background"
 
 ## 你好，世界！
 
-这是本站的第一篇推文，使用Hugo构建于Github Pages
+这是本站的第一篇推文，使用Hugo引擎构建于Github Pages
 
 本文的剩余部分用于测试**本主题(Blowfish)**独有的语法功能
 
