@@ -7,6 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <atom:link href="https://witchcraft-jasper.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Apr 2024 17:08:21 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试用内容</title>
+      <link>https://witchcraft-jasper.github.io/series/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Wed, 03 Apr 2024 17:08:21 +0800</pubDate>
+      
+      <guid>https://witchcraft-jasper.github.io/series/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%86%85%E5%AE%B9/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>
