@@ -2,6 +2,7 @@
 title = 'Markdown语法兼容性测试'
 date = 2024-04-03T15:36:21+08:00
 draft = false
+tags = ["测试", "Markdown"]
 +++
 
 > 使用Hugo构建于Github Pages
