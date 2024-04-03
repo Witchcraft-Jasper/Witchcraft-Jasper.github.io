@@ -12,11 +12,10 @@ title = "Blowfish"
   description = "A powerful, lightweight theme for Hugo."
 
 [author]
-  name = "Blowfish"
-  image = "img/blowfish_logo.png"
-  headline = "A powerful, lightweight theme for Hugo."
-  bio = "A powerful, lightweight theme for Hugo."
+  name = "Witchcraft"
+  image = "/img/author2.png"
+  headline = "Pale blue dot"
+  bio = "All that we see or seem, is but a dream within a dream."
   links = [
-    { x-twitter = "https://twitter.com/burufugu" },
-    { github = "https://github.com/nunocoracao/blowfish" },
+    { email = "dszlym666@gmail.com" },
   ]
