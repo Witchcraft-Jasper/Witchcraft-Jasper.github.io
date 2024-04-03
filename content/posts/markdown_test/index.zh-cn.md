@@ -5,6 +5,7 @@ draft = false
 tags = ["测试", "Markdown"]
 series = ["测试用内容"]
 series_order = 2
+heroStyle = "big"
 +++
 
 
