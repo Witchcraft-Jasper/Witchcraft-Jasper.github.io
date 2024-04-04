@@ -2,6 +2,7 @@
 title = '使用MacOS为本地及服务器配置jupyter及zsh'
 date = 2024-04-03T19:40:20+08:00
 draft = false
+tags = ["环境配置", "Linux", "Mac", "Jupyter"]
 +++
 # 如何配置jupyter及zsh
 
