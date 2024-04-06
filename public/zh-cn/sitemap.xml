@@ -3,61 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://witchcraft-jasper.github.io/posts/</loc>
     <lastmod>2024-04-03T19:40:20+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/posts/"
+      href="https://witchcraft-jasper.github.io/en/posts/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/posts/"
+      href="https://witchcraft-jasper.github.io/posts/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://witchcraft-jasper.github.io/</loc>
     <lastmod>2024-04-03T19:40:20+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/"
+      href="https://witchcraft-jasper.github.io/en/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/"
+      href="https://witchcraft-jasper.github.io/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/posts/build_jupyter_zsh/</loc>
+    <loc>https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/</loc>
     <lastmod>2024-04-03T19:40:20+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/posts/build_jupyter_zsh/"
+      href="https://witchcraft-jasper.github.io/en/posts/build_jupyter_zsh/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/posts/build_jupyter_zsh/"
+      href="https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/posts/markdown_test/</loc>
+    <loc>https://witchcraft-jasper.github.io/posts/markdown_test/</loc>
     <lastmod>2024-04-03T17:08:21+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/first_page/</loc>
+    <loc>https://witchcraft-jasper.github.io/posts/first_page/</loc>
     <lastmod>2024-04-03T15:36:21+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

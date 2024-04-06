@@ -4,7 +4,6 @@ date = 2024-04-03T19:40:20+08:00
 draft = false
 tags = ["Env Config", "Linux", "Mac", "Jupyter"]
 +++
-# How to Configure Jupyter and zsh
 
 > This page is translated by GPT-4
 

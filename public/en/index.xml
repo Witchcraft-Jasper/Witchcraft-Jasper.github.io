@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Witchcraft&#39;s space</title>
-    <link>http://localhost:1313/en/</link>
+    <link>https://witchcraft-jasper.github.io/en/</link>
     <description>Recent content on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Wed, 03 Apr 2024 19:40:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Apr 2024 19:40:20 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuring Jupyter and zsh for Local and Server Environments on MacOS</title>
-      <link>http://localhost:1313/en/posts/build_jupyter_zsh/</link>
+      <link>https://witchcraft-jasper.github.io/en/posts/build_jupyter_zsh/</link>
       <pubDate>Wed, 03 Apr 2024 19:40:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/posts/build_jupyter_zsh/</guid>
-      <description>How to Configure Jupyter and zsh # This page is translated by GPT-4</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/build_jupyter_zsh/featured.png" />
+      <guid>https://witchcraft-jasper.github.io/en/posts/build_jupyter_zsh/</guid>
+      <description>This page is translated by GPT-4</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/featured.png" />
     </item>
     
   </channel>
