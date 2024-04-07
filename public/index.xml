@@ -2,38 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Witchcraft&#39;s space</title>
-    <link>https://witchcraft-jasper.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Wed, 03 Apr 2024 19:40:20 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Apr 2024 23:41:06 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gnn_pt1</title>
+      <link>http://localhost:1313/posts/gnn_pt1/</link>
+      <pubDate>Sun, 07 Apr 2024 23:41:06 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/gnn_pt1/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>使用MacOS为本地及服务器配置jupyter及zsh</title>
-      <link>https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/</link>
+      <link>http://localhost:1313/posts/build_jupyter_zsh/</link>
       <pubDate>Wed, 03 Apr 2024 19:40:20 +0800</pubDate>
       
-      <guid>https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/</guid>
+      <guid>http://localhost:1313/posts/build_jupyter_zsh/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/build_jupyter_zsh/featured.png" />
     </item>
     
     <item>
       <title>Markdown语法兼容性测试</title>
-      <link>https://witchcraft-jasper.github.io/posts/markdown_test/</link>
+      <link>http://localhost:1313/posts/markdown_test/</link>
       <pubDate>Wed, 03 Apr 2024 17:08:21 +0800</pubDate>
       
-      <guid>https://witchcraft-jasper.github.io/posts/markdown_test/</guid>
+      <guid>http://localhost:1313/posts/markdown_test/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/markdown_test/featured.jpeg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/markdown_test/featured.jpeg" />
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>https://witchcraft-jasper.github.io/posts/first_page/</link>
+      <link>http://localhost:1313/posts/first_page/</link>
       <pubDate>Wed, 03 Apr 2024 15:36:21 +0800</pubDate>
       
-      <guid>https://witchcraft-jasper.github.io/posts/first_page/</guid>
+      <guid>http://localhost:1313/posts/first_page/</guid>
       <description></description>
       
     </item>
