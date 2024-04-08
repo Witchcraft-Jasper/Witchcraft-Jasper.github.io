@@ -18,6 +18,8 @@ draft = true
 
 ​	下图为一张交通系统的图结构，在6个位置上分别有一个传感器记录了一段时间的交通流量数据，现在的目标是要预测接下来每个位置上未来一段时间的流量。如果从传统的时间序列模型来思考，未来的数据一定是与过去的数据相关，因此我们可以对6个位置的时间序列单独进行预测生成6个位置未来的预测值，但是这样就没有考虑到节点之间的空间依赖关系。既然已经用图结构表示出了这种空间关系，那么我们怎么去应用它？这就是图网络所要解决的问题。
 
+<img src="p0.webp" alt="图网络结构" class="center-image"/>
+
 <!-- ![](/Users/didi/Documents/p0.webp) -->
 
 ### GCN(Graph Convolutional Network)
@@ -26,6 +28,7 @@ draft = true
 
 ​	GCN（图卷积神经网络），实际上跟CNN（卷积神经网络）的作用一样，就是一个特征提取器，只不过它的对象是图数据。GCN精妙地设计了一种从图数据中提取特征的方法，从而让我们可以使用这些特征去对图数据进行节点分类（node classification）、图分类（graph classification）、边预测（link prediction），还可以顺便得到图的嵌入表示（graph embedding）。下图为GCN和输入图像数据的CNN间的对比。
 
+<img src="p1.png" alt="GCN结构" class="center-image"/>
 <!-- ![](/Users/didi/Documents/p1.png) -->
 
 #### 计算原理

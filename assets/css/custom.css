@@ -6,3 +6,11 @@
  /* html:lang(zh-cn) {
     font-family: cn_font;
 } */
+
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
