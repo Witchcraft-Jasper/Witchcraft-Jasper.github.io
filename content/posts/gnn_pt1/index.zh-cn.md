@@ -1,5 +1,5 @@
 +++
-title = 'Gnn_pt1'
+title = '图神经网络学习笔记（1）'
 date = 2024-04-07T23:41:06+08:00
 draft = false
 +++

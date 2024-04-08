@@ -3,6 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://witchcraft-jasper.github.io/</loc>
+    <lastmod>2024-04-07T23:41:06+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://witchcraft-jasper.github.io/en/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="https://witchcraft-jasper.github.io/"
+    />
+  </url>
+  <url>
     <loc>https://witchcraft-jasper.github.io/posts/gnn_pt1/</loc>
     <lastmod>2024-04-07T23:41:06+08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -22,22 +38,6 @@
       rel="alternate"
       hreflang="zh-cn"
       href="https://witchcraft-jasper.github.io/posts/"
-    />
-  </url>
-  <url>
-    <loc>https://witchcraft-jasper.github.io/</loc>
-    <lastmod>2024-04-07T23:41:06+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://witchcraft-jasper.github.io/en/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="https://witchcraft-jasper.github.io/"
     />
   </url>
   <url>

@@ -15,6 +15,13 @@
   pageRef = "posts"
   weight = 10
 
+
+[[main]]
+  name = "杂项"
+  pageRef = "funs"
+  weight = 15
+
+
 [[main]]
   name = "时间线"
   pageRef = "timeline"
