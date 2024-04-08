@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://witchcraft-jasper.github.io/posts/gnn_pt1/</loc>
+    <lastmod>2024-04-07T23:41:06+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://witchcraft-jasper.github.io/posts/</loc>
     <lastmod>2024-04-07T23:41:06+08:00</lastmod>
     <changefreq>daily</changefreq>

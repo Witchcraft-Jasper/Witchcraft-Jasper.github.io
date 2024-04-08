@@ -1,7 +1,7 @@
 +++
 title = 'Gnn_pt1'
 date = 2024-04-07T23:41:06+08:00
-draft = true
+draft = false
 +++
 
 ## 图神经网络学习笔记（1）
