@@ -5,7 +5,6 @@ draft = false
 tags = ["测试", "Markdown"]
 series = ["测试用内容"]
 series_order = 1
-heroStyle = "background"
 +++
 
 ## 你好，世界！
@@ -51,12 +50,6 @@ heroStyle = "background"
 
 {{< timelineItem icon="star" header="Shortcodes" badge="AWESOME" >}}
 2024.04.03上传第一篇推文
-测试Timeline内添加gallery
-{{< gallery >}}
-  <img src="img/bg.jpg" class="grid-w33" />
-  <img src="img/blowfish.jpg" class="grid-w33" />
-  <img src="img/iceland.jpg" class="grid-w33" />
-{{< /gallery >}}
 {{< /timelineItem >}}
 
 {{< /timeline >}}
