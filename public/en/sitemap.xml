@@ -3,24 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/en/posts/build_jupyter_zsh/</loc>
-    <lastmod>2024-04-03T19:40:20+08:00</lastmod>
+    <loc>http://localhost:1313/en/posts/latex_symbols/</loc>
+    <lastmod>2024-04-11T17:55:39+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/posts/build_jupyter_zsh/"
+      href="http://localhost:1313/posts/latex_symbols/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/posts/build_jupyter_zsh/"
+      href="http://localhost:1313/en/posts/latex_symbols/"
     />
   </url>
   <url>
     <loc>http://localhost:1313/en/posts/</loc>
-    <lastmod>2024-04-03T19:40:20+08:00</lastmod>
+    <lastmod>2024-04-11T17:55:39+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>http://localhost:1313/en/</loc>
-    <lastmod>2024-04-03T19:40:20+08:00</lastmod>
+    <lastmod>2024-04-11T17:55:39+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -48,6 +48,22 @@
       rel="alternate"
       hreflang="en"
       href="http://localhost:1313/en/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/posts/build_jupyter_zsh/</loc>
+    <lastmod>2024-04-03T19:40:20+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/posts/build_jupyter_zsh/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/en/posts/build_jupyter_zsh/"
     />
   </url>
 </urlset>

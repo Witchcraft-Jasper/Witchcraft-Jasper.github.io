@@ -20,10 +20,6 @@
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
-
-
 <body
   class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
   <div id="the-top" class="absolute flex self-center">
@@ -46,11 +42,6 @@
       {{ end }}
     </main>
     {{- partial "footer.html" . -}}
-
-    <!-- add mermaid -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>     -->
-
     {{ if .Site.Params.enableSearch | default false }}
     {{- partial "search.html" . -}}
     {{ end }}

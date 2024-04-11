@@ -3,8 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/posts/latex_symbols/</loc>
+    <lastmod>2024-04-11T17:55:39+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/en/posts/latex_symbols/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/posts/latex_symbols/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-04-07T23:41:06+08:00</lastmod>
+    <lastmod>2024-04-11T17:55:39+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -19,14 +35,8 @@
     />
   </url>
   <url>
-    <loc>http://localhost:1313/posts/gnn_pt1/</loc>
-    <lastmod>2024-04-07T23:41:06+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-04-07T23:41:06+08:00</lastmod>
+    <lastmod>2024-04-11T17:55:39+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -39,6 +49,12 @@
       hreflang="zh-cn"
       href="http://localhost:1313/posts/"
     />
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/gnn_pt1/</loc>
+    <lastmod>2024-04-07T23:41:06+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/posts/build_jupyter_zsh/</loc>
