@@ -9,20 +9,19 @@ In the process of writing papers, creating presentations in PowerPoint, and edit
 
 ## Part 1：Greek/Hebrew characters, mathematical construction symbols, separators, variable length symbols in formulas, standard functions
 
-<img src="pt1.webp" alt="Latex Symbol pt1" class="center-image"/>
+<img src="/posts/latex_symbols/img/pt1.webp" alt="Latex Symbol pt1" class="center-image"/>
 
 ## Part 2：Binary operators and relational symbols
 
-<img src="pt2.webp" alt="Latex Symbol pt2" class="center-image"/>
-
-
+<img src="/posts/latex_symbols/img/pt2.webp" alt="Latex Symbol pt2" class="center-image"/>
+ 
 ## Part 3：Arrows, calculus sets, musical notes, mathematical mode accents
 
-<img src="pt3.webp" alt="Latex Symbol pt3" class="center-image"/>
+<img src="/posts/latex_symbols/img/pt3.webp" alt="Latex Symbol pt3" class="center-image"/>
 
 ## Part 4：Array environment, other mathematical styles, font sizes, text accent symbols
 
-<img src="pt4.webp" alt="Latex Symbol pt4" class="center-image"/>
+<img src="/posts/latex_symbols/img/pt4.webp" alt="Latex Symbol pt4" class="center-image"/>
 
 
 
