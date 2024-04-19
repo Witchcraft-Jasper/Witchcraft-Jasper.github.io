@@ -117,13 +117,13 @@ defaultFeaturedImage = "/img/ocean.jpg" # used as default for featured images in
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  apiKey = "AIzaSyCr3u1oGcqZw50Or63QlnMMty6r-LpziNc"
+  authDomain = "my-github-page-57af1.firebaseapp.com"
+  projectId = "my-github-page-57af1"
+  storageBucket = "my-github-page-57af1.appspot.com"
+  messagingSenderId = "872148441458"
+  appId = "1:872148441458:web:6b03f758713b85a8da65eb"
+  measurementId = "G-ZVEQDKKLC7"
 
 [fathomAnalytics]
   # site = "ABC12345"
