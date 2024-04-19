@@ -48,10 +48,10 @@ defaultFeaturedImage = "/img/ocean.jpg" # used as default for featured images in
 
 [article]
   showDate = true
-  showViews = false
+  showViews = true
   showLikes = false
   showDateOnlyInArticle = false
-  showDateUpdated = false
+  showDateUpdated = true
   showAuthor = true
   showHero = true
   heroStyle = "big" # valid options: basic, big, background, thumbAndBackground
