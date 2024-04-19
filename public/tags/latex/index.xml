@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Latex on Witchcraft&#39;s space</title>
-    <link>http://localhost:1313/tags/latex/</link>
+    <link>https://witchcraft-jasper.github.io/tags/latex/</link>
     <description>Recent content in Latex on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Thu, 11 Apr 2024 17:55:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2024 17:55:39 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Latex相关符号速查手册</title>
-      <link>http://localhost:1313/posts/latex_symbols/</link>
+      <link>https://witchcraft-jasper.github.io/posts/latex_symbols/</link>
       <pubDate>Thu, 11 Apr 2024 17:55:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/latex_symbols/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/latex_symbols/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/latex_symbols/feature.webp" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/latex_symbols/feature.webp" />
     </item>
     
   </channel>
