@@ -102,7 +102,7 @@
     "keywords": ["机器学习","图神经网络","学习笔记"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1549"
+    "wordCount": "1971"
   }]
   </script>
 
@@ -463,6 +463,16 @@
 
 
 
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
 
   
   <div class="relative flex flex-col grow">
@@ -538,7 +548,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-04-07 23:41:06 &#43;0800 CST">2024-04-07</time><span class="px-2 text-primary-500">&middot;</span><span>1549 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2024-04-07 23:41:06 &#43;0800 CST">2024-04-07</time><span class="px-2 text-primary-500">&middot;</span><span>1971 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -775,6 +785,7 @@
         <li><a href="#常规邻接矩阵">常规邻接矩阵</a>
           <ul>
             <li><a href="#考虑自身信息的邻接矩阵">考虑自身信息的邻接矩阵</a></li>
+            <li><a href="#求平均归一化">求平均/归一化</a></li>
           </ul>
         </li>
       </ul>
@@ -803,6 +814,7 @@
         <li><a href="#常规邻接矩阵">常规邻接矩阵</a>
           <ul>
             <li><a href="#考虑自身信息的邻接矩阵">考虑自身信息的邻接矩阵</a></li>
+            <li><a href="#求平均归一化">求平均/归一化</a></li>
           </ul>
         </li>
       </ul>
@@ -919,6 +931,32 @@ $$
 <p>接着将得到的新邻接矩阵与特征矩阵相乘的到新的特征矩阵</p>
 <img src="img/p6.webp" alt="新邻接矩阵聚类" class="center-image"/>
 <p>可以看出，加入单位矩阵之后，B和C虽然具有相同的邻居，但是由于自身的特征不一样，所以空间变换后的特征也不一样。单位矩阵的加入，使得矩阵相乘时，考虑到了自身节点的信息的因素。</p>
+
+
+<h4 class="relative group">求平均/归一化 
+    <div id="%E6%B1%82%E5%B9%B3%E5%9D%87%E5%BD%92%E4%B8%80%E5%8C%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%B1%82%E5%B9%B3%E5%9D%87%E5%BD%92%E4%B8%80%E5%8C%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>采用之前的方式，相当于我们对所有节点的邻居及自身进行了求和，但是这种聚合方式是有问题的，相当于我们变相的改变了特征的量级。我们每进行一次聚合，就加大了一次量级。随着迭代的增加，量级会越来越大，假设现在我要求小明的收入，那么采用求和的方式就会将小明的邻居朋友们及自己的收入加起来，这显然是错误的。因此更好地方式是求平均，类比到图结构中就是左乘我们的度矩阵。</p>
+<p>其中度矩阵就是与该节点相邻节点的数据，因此就是邻接矩阵A每一行的求和组成的对角阵
+$$
+D=\Sigma_jA_{ij}
+$$</p>
+<img src="img/p7.webp" alt="邻接矩阵行求和得到度矩阵" class="center-image"/>
+<p>同样的这种方式也只考虑到了邻居节点的个数而没有考虑到自身的信息，因此在度矩阵D上在加上单位阵 I ，也即$\tilde A$的每一行的求和，即：
+$$
+\tilde D=D+I=\Sigma_j\tilde A_{ij}
+$$
+<img src="img/p8.webp" alt="考虑自身信息的度矩阵" class="center-image"/></p>
+<p>所以最终的求平均的操作就为 $ \tilde D^{-1}\tilde AX$，由于矩阵乘法满足结合律，所以 $ \tilde D^{-1}\tilde AX = \tilde D^{-1}(\tilde AX)$，又由于 $ \tilde D^{-1}$ 为初等矩阵，左乘初等矩阵相当于行变换，所以相当于对$ \tilde AX $的每一行除以度，相当于对每一个节点求和后的特征做平均。</p>
+<img src="img/p9.png" alt="邻接矩阵归一化" class="center-image"/>
+<p>这就是邻接矩阵的归一化。</p>
 
         </div>
         
