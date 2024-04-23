@@ -14,3 +14,9 @@
     margin-right: auto;
     text-align: center;
 }
+
+.MathJax svg {
+    display: inline;
+    vertical-align: middle;
+    overflow: visible;
+  }
