@@ -2,7 +2,7 @@
 title = 'Latex相关符号速查手册'
 date = 2024-04-11T17:55:39+08:00
 draft = false
-tags = ["Latex", "Markdown"]
+tags = ["Latex", "Markdown", "查询"]
 +++
 
 在论文编写，ppt，word，Markdown，Latex等文档编辑过程中经常会遇到一些符号编辑记不住的问题，这里转载一下latex说明文档上的一些内容，方便自查。
