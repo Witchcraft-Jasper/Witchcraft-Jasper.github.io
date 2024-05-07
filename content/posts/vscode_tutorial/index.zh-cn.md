@@ -2,6 +2,7 @@
 title = 'Mac版Vscode快捷键速查'
 date = 2024-05-07T10:34:21+08:00
 draft = false
+tags = ["Mac", "查询"]
 +++
 
 ## 1. Mac 键盘符号说明
