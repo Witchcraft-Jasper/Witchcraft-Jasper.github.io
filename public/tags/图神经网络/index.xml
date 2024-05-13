@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>图神经网络 on Witchcraft&#39;s space</title>
-    <link>https://witchcraft-jasper.github.io/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+    <link>http://localhost:1313/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
     <description>Recent content in 图神经网络 on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Sun, 07 Apr 2024 23:41:06 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Apr 2024 23:41:06 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图神经网络学习笔记（1）</title>
-      <link>https://witchcraft-jasper.github.io/posts/gnn_pt1/</link>
+      <link>http://localhost:1313/posts/gnn_pt1/</link>
       <pubDate>Sun, 07 Apr 2024 23:41:06 +0800</pubDate>
       
-      <guid>https://witchcraft-jasper.github.io/posts/gnn_pt1/</guid>
+      <guid>http://localhost:1313/posts/gnn_pt1/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/gnn_pt1/feature.webp" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/gnn_pt1/feature.webp" />
     </item>
     
   </channel>

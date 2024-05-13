@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>桌游 on Witchcraft&#39;s space</title>
-    <link>https://witchcraft-jasper.github.io/tags/%E6%A1%8C%E6%B8%B8/</link>
+    <link>http://localhost:1313/tags/%E6%A1%8C%E6%B8%B8/</link>
     <description>Recent content in 桌游 on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Thu, 18 Apr 2024 17:26:53 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/tags/%E6%A1%8C%E6%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Apr 2024 17:26:53 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%A1%8C%E6%B8%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>璀璨宝石牌型分析</title>
-      <link>https://witchcraft-jasper.github.io/funs/boardgame/splendor/</link>
+      <link>http://localhost:1313/funs/boardgame/splendor/</link>
       <pubDate>Thu, 18 Apr 2024 17:26:53 +0800</pubDate>
       
-      <guid>https://witchcraft-jasper.github.io/funs/boardgame/splendor/</guid>
+      <guid>http://localhost:1313/funs/boardgame/splendor/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/funs/boardgame/splendor/feature.jpeg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/funs/boardgame/splendor/feature.jpeg" />
     </item>
     
   </channel>

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>测试 on Witchcraft&#39;s space</title>
-    <link>https://witchcraft-jasper.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+    <link>http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/</link>
     <description>Recent content in 测试 on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Wed, 03 Apr 2024 17:08:21 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Apr 2024 17:08:21 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown语法兼容性测试</title>
-      <link>https://witchcraft-jasper.github.io/posts/markdown_test/</link>
+      <link>http://localhost:1313/posts/markdown_test/</link>
       <pubDate>Wed, 03 Apr 2024 17:08:21 +0800</pubDate>
       
-      <guid>https://witchcraft-jasper.github.io/posts/markdown_test/</guid>
+      <guid>http://localhost:1313/posts/markdown_test/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/markdown_test/featured.jpeg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/markdown_test/featured.jpeg" />
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>https://witchcraft-jasper.github.io/posts/first_page/</link>
+      <link>http://localhost:1313/posts/first_page/</link>
       <pubDate>Wed, 03 Apr 2024 15:36:21 +0800</pubDate>
       
-      <guid>https://witchcraft-jasper.github.io/posts/first_page/</guid>
+      <guid>http://localhost:1313/posts/first_page/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/first_page/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/first_page/feature.png" />
     </item>
     
   </channel>
