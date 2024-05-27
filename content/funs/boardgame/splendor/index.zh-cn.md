@@ -1,6 +1,6 @@
 +++
 title = '璀璨宝石牌型分析'
-date = 2024-04-18T17:26:53+08:00
+date = 2024-05-27T17:06:53+08:00
 draft = false
 tags = ["桌游"]
 heroStyle = "big"
