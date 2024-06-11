@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Tue, 07 May 2024 10:34:21 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jun 2024 15:36:58 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图神经网络学习笔记（2）</title>
+      <link>http://localhost:1313/posts/gnn_pt2/</link>
+      <pubDate>Tue, 11 Jun 2024 15:36:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/gnn_pt2/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>璀璨宝石牌型分析</title>
+      <link>http://localhost:1313/funs/boardgame/splendor/</link>
+      <pubDate>Mon, 27 May 2024 17:06:53 +0800</pubDate>
+      
+      <guid>http://localhost:1313/funs/boardgame/splendor/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/funs/boardgame/splendor/feature.jpeg" />
+    </item>
+    
     <item>
       <title>Mac版Vscode快捷键速查</title>
       <link>http://localhost:1313/posts/vscode_tutorial/</link>
@@ -26,16 +46,6 @@
       <guid>http://localhost:1313/posts/iterm2_tutorial/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/iterm2_tutorial/feature.jpeg" />
-    </item>
-    
-    <item>
-      <title>璀璨宝石牌型分析</title>
-      <link>http://localhost:1313/funs/boardgame/splendor/</link>
-      <pubDate>Thu, 18 Apr 2024 17:26:53 +0800</pubDate>
-      
-      <guid>http://localhost:1313/funs/boardgame/splendor/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/funs/boardgame/splendor/feature.jpeg" />
     </item>
     
     <item>
