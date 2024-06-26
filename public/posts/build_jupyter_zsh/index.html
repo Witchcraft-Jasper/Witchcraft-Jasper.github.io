@@ -102,7 +102,7 @@
     "keywords": ["环境配置","Linux","Mac","Jupyter"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2270"
+    "wordCount": "2375"
   }]
   </script>
 
@@ -618,7 +618,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-04-03 19:40:20 &#43;0800 CST">2024-04-03</time><span class="px-2 text-primary-500">&middot;</span><span>2270 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2024-04-03 19:40:20 &#43;0800 CST">2024-04-03</time><span class="px-2 text-primary-500">&middot;</span><span>2375 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -1032,6 +1032,15 @@
 </span></span></span></code></pre></div><p>执行nohup sh start_jupyter.sh &gt;jupyter.log&amp;即可启动jupyter服务，在jupyter.log中可以找到访问链接，复制到浏览器打开即可使用</p>
 <p>(可选)安装暗色模式jupyter lab界面，看自己需求安装，安装好之后在settings-&gt;theme中可以更换</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip install jupyterlab_darkside_ui -i https://pypi.tuna.tsinghua.edu.cn/simple
+</span></span></code></pre></div><p>(可选)更换语言为中文:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 install jupyterlab-language-pack-zh-CN -i https://pypi.tuna.tsinghua.edu.cn/simple
+</span></span></code></pre></div><p>(可选)添加代码补全和代码提示:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip3 install jupyterlab-lsp -i https://pypi.tuna.tsinghua.edu.cn/simple
+</span></span><span class="line"><span class="cl">pip3 install -U jedi-language-server -i https://pypi.tuna.tsinghua.edu.cn/simple
+</span></span></code></pre></div><p>完成修改后，设置-&gt;高级设置编辑器-&gt;Code Completion-&gt;Json编辑器 添加以下内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;continuousHinting&#34;</span>: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div>
 
 <h2 class="relative group">配置zsh 

@@ -100,6 +100,26 @@ pyspark --name your_name_data_process \
 pip install jupyterlab_darkside_ui -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
+(可选)更换语言为中文:
+
+```shell
+pip3 install jupyterlab-language-pack-zh-CN -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+(可选)添加代码补全和代码提示:
+
+```shell
+pip3 install jupyterlab-lsp -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 install -U jedi-language-server -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+完成修改后，设置->高级设置编辑器->Code Completion->Json编辑器 添加以下内容
+
+```shell
+{
+"continuousHinting": true
+}
+```
+
 ## 配置zsh
 
 考虑到安装oh-my-zsh需要访问github链接，而服务器往往访问速度较慢，因此建议先在本地安装再将其复制到服务器上，也省去了重复安装插件的时间
@@ -235,4 +255,5 @@ https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 (可选)更换字体，自定义zsh主题: 
 https://juejin.cn/post/6844904178075058189#heading-32
+
 
