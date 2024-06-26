@@ -2,7 +2,7 @@
 title = '图神经网络学习笔记（2）'
 date = 2024-06-11T15:36:58+08:00
 tags = ["机器学习", "图神经网络", "学习笔记"]
-draft = true
+draft = false
 +++
 
 ## GAT(Graph Attention Networks)
