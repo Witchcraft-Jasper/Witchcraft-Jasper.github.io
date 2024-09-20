@@ -71,13 +71,13 @@
   <meta property="og:title" content="Graph Skeleton论文阅读" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://witchcraft-jasper.github.io/posts/graph_skeleton/" /><meta property="og:image" content="https://witchcraft-jasper.github.io/posts/graph_skeleton/feature.webp" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://witchcraft-jasper.github.io/posts/graph_skeleton/" /><meta property="og:image" content="https://witchcraft-jasper.github.io/posts/graph_skeleton/feature.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-09-20T11:10:15+08:00" />
 <meta property="article:modified_time" content="2024-09-20T11:10:15+08:00" />
 
 
   <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://witchcraft-jasper.github.io/posts/graph_skeleton/feature.webp" /><meta name="twitter:title" content="Graph Skeleton论文阅读"/>
+<meta name="twitter:image" content="https://witchcraft-jasper.github.io/posts/graph_skeleton/feature.png" /><meta name="twitter:title" content="Graph Skeleton论文阅读"/>
 <meta name="twitter:description" content=""/>
 
   
@@ -105,7 +105,7 @@
     "keywords": ["机器学习","图神经网络","学习笔记"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "7585"
+    "wordCount": "7598"
   }]
   </script>
 
@@ -487,7 +487,7 @@
 
         
         <figure>
-            <img class="w-full rounded-lg single_hero_round nozoom" alt="Graph Skeleton论文阅读" width="1200" height="675" src="/posts/graph_skeleton/feature_hu00a03605ab587fce7f7536e58d64cee6_39978_1200x0_resize_q75_h2_box_2.webp">
+            <img class="w-full rounded-lg single_hero_round nozoom" alt="Graph Skeleton论文阅读" width="1200" height="422" src="/posts/graph_skeleton/feature_huc8db0529ba7d15959f4667625500c8e8_801544_1200x0_resize_box_3.png">
             
         </figure>
         
@@ -545,7 +545,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-09-20T11:10:15&#43;08:00">2024-09-20</time><span class="px-2 text-primary-500">&middot;</span><span>7585 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">16 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2024-09-20T11:10:15&#43;08:00">2024-09-20</time><span class="px-2 text-primary-500">&middot;</span><span>7598 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">16 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -680,7 +680,7 @@
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#empirical-analysis">Empirical Analysis</a>
       <ul>
-        <li><a href="#两个疑问"><strong>两个疑问</strong></a></li>
+        <li><a href="#两个疑问">两个疑问</a></li>
         <li><a href="#数据集">数据集</a></li>
         <li><a href="#其他猜想">其他猜想</a></li>
         <li><a href="#分析结论">分析结论</a></li>
@@ -727,7 +727,7 @@
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#empirical-analysis">Empirical Analysis</a>
       <ul>
-        <li><a href="#两个疑问"><strong>两个疑问</strong></a></li>
+        <li><a href="#两个疑问">两个疑问</a></li>
         <li><a href="#数据集">数据集</a></li>
         <li><a href="#其他猜想">其他猜想</a></li>
         <li><a href="#分析结论">分析结论</a></li>
@@ -812,6 +812,9 @@
     </span>        
     
 </h1>
+<blockquote>
+<p>论文：https://arxiv.org/abs/2402.09565</p>
+</blockquote>
 
 
 <h2 class="relative group">Abstract 
@@ -855,7 +858,7 @@
 </h2>
 
 
-<h3 class="relative group"><strong>两个疑问</strong> 
+<h3 class="relative group">两个疑问 
     <div id="%E4%B8%A4%E4%B8%AA%E7%96%91%E9%97%AE" class="anchor"></div>
     
     <span
@@ -949,8 +952,8 @@
     </span>        
     
 </h3>
-<p>在大规模图$G = (V, E)$ 中，针对一个特定的节点分类任务，我们可以得到一个相应的节点集合 $T = {T_1, T_2, \dots, T_n}$，其中包含了需要进行分类的节点。在大多数实际场景中，节点集合 $T$ 的大小远小于图中所有节点的总数 $|V|$。</p>
-<p>在这篇论文中，我们将 $T$ 称为<strong>目标节点</strong>(target nodes)，而图 $G$  中的其他节点则称为<strong>背景节点</strong>(background nodes)，记作 $B := V \setminus T = {B_1, B_2, \dots, B_{|V| - n}}$。图 G 同时还与节点特征 $X \in \mathbb{R}^{|V| \times d}$ 和目标节点标签$Y\in {0, \dots, C - 1}^n$相关联。考虑到大多数节点都是背景节点，我们的<strong>目标</strong>是<strong>生成一个具有高度信息量的合成图 $G&rsquo;$，同时显著减少背景节点的数量。<strong>除此之外，论文主要关注对目标节点的分类情况，因此</strong>仅对背景节点进行压缩</strong>，而<strong>保留了所有原始的目标节点。</strong></p>
+<p>在大规模图$G = (V, E)$ 中，针对一个特定的节点分类任务，我们可以得到一个相应的节点集合 $T = \{T_1, T_2, \dots, T_n\}$，其中包含了需要进行分类的节点。在大多数实际场景中，节点集合 $T$ 的大小远小于图中所有节点的总数 $|V|$。</p>
+<p>在这篇论文中，我们将 $T$ 称为<strong>目标节点</strong>(target nodes)，而图 $G$  中的其他节点则称为<strong>背景节点</strong>(background nodes)，记作 $B := V \setminus T = \{B_1, B_2, \dots, B_{|V| - n}\}$。图 G 同时还与节点特征 $X \in \mathbb{R}^{|V| \times d}$ 和目标节点标签$Y\in \{0, \dots, C - 1\}^n$相关联。考虑到大多数节点都是背景节点，我们的<strong>目标</strong>是<strong>生成一个具有高度信息量的合成图 $G&rsquo;$，同时显著减少背景节点的数量。<strong>除此之外，论文主要关注对目标节点的分类情况，因此</strong>仅对背景节点进行压缩</strong>，而<strong>保留了所有原始的目标节点。</strong></p>
 
 
 <h3 class="relative group">框架概述 
@@ -970,6 +973,7 @@
 <li><strong>第三步-分类任务</strong>：压缩后的图具有高度的信息量，同时享有小规模带来的存储和图模型部署的优势。可将其应用于各种GNN模型进行分类任务。</li>
 </ul>
 <img src="img/image_8.png" alt="框架概述" class="center-image"/>
+<img src="img/image_9.png" alt="节点提取" class="center-image" width="25%"/>
 
 
 <h3 class="relative group">1. 节点提取 
@@ -989,30 +993,29 @@
 <li><strong>特征相关性</strong>：对于每个单独的目标节点，在$d_2$跳范围内，与目标节点特征相关性最高的$K$个背景节点视为<strong>关联节点</strong>进行保留。</li>
 </ol>
 <p>因此首要目标是找到每个目标节点的所有可访问的背景节点(可访问指的是可从<strong>仅由背景节点</strong>组成的路径到达)。</p>
-<img src="img/image_9.png" alt="节点提取" class="center-image" size="50%"/>
 <p>*本论文中将超参数规定为$d_1=3, d_2=1,k=2$</p>
 <p><strong>对于原则1-结构连通性</strong>：</p>
 <ol>
 <li><strong>找背景节点</strong>：通过对每个目标节点使用BFS找所有可到达的背景节点</li>
-<li><strong>找最短路径</strong>：假设背景节点 $B_j$ 可以访问目标节点集合为${T_{k1}, T_{k2}, &hellip;, T_{ki}}$，则对应的最短路径集可以表示为 $P_{Bj} = {p_{k1,j}, p_{k2,j}, &hellip;, p_{ki,j}}$，计算这些路径长度$d(P_{Bj}) = {d(p_{k1,j}), &hellip;, d(p_{ki,j})}$ （其中 d(t) 是距离函数），并将这些路径长度的最小值和第二小值相加，得到$sd_j = \min [ d(P_{Bj}) ] + \min 2nd [ d(P_{Bj}) ]$</li>
+<li><strong>找最短路径</strong>：假设背景节点 $B_j$ 可以访问目标节点集合为$\{T_{k1}, T_{k2}, &hellip;, T_{ki}\}$，则对应的最短路径集可以表示为 $P_{Bj} = \{p_{k1,j}, p_{k2,j}, &hellip;, p_{ki,j}\}$，计算这些路径长度$d(P_{Bj}) = \{d(p_{k1,j}), &hellip;, d(p_{ki,j})\}$ （其中 d(t) 是距离函数），并将这些路径长度的最小值和第二小值相加，得到$sd_j = \min [ d(P_{Bj}) ] + \min 2nd [ d(P_{Bj}) ]$</li>
 <li><strong>判断是否为桥接节点</strong>：如果$sd_j≤d_1$，这意味着背景节点 $B_j$ 在 $d_1$跳范围内至少连接了两个目标节点，因此将其视为桥接节点。</li>
 </ol>
 <p>通过遍历所有背景节点，可以得到一个包含所有<strong>桥接节点</strong>的节点子集$BR$。</p>
 <p><strong>对于原则2-特征相关性</strong>：</p>
 <ol>
-<li><strong>找背景节点</strong>：通过对每个目标节点 $T_i$ 执行BFS，获得 $T_i$ 到其所有可访问背景节点的最短路径集合。设 $J := { j_1, j_2, &hellip;, j_k }$ 为 $T_i$ **可访问背景节点的索引集合，对应的最短路径集合为 $P_{T_i} := { p_{i,j} }$，其中 $j \in J, p_{i,j}$ 表示从 $T_i$ 到某个可访问背景节点 $B_j$ 的最短路径。</li>
-<li><strong>判断距离</strong>：选择那些最短路径距离在 $d_2$ 以内的可访问背景节点，即 ${ B_m, m \in J, s.t., d(p_{i,m}) \leq d_2 }$</li>
+<li><strong>找背景节点</strong>：通过对每个目标节点 $T_i$ 执行BFS，获得 $T_i$ 到其所有可访问背景节点的最短路径集合。设 $J := \{ j_1, j_2, &hellip;, j_k \}$ 为 $T_i$ **可访问背景节点的索引集合，对应的最短路径集合为 $P_{T_i} := \{ p_{i,j} \}$，其中 $j \in J, p_{i,j}$ 表示从 $T_i$ 到某个可访问背景节点 $B_j$ 的最短路径。</li>
+<li><strong>判断距离</strong>：选择那些最短路径距离在 $d_2$ 以内的可访问背景节点，即 $\{ B_m, m \in J, s.t., d(p_{i,m}) \leq d_2 \}$</li>
 <li><strong>计算相关性</strong>：为了选择最重要的 $K$ 个背景节点，我们需要计算每个被选中的 $B_m$ 与 $T_i$ 之间的特征皮尔逊相关系数 (PCC):</li>
 </ol>
 <p>$$
 PCC_im=\frac{cov(X[i],X[m])}{σ_{X[i]}⋅σ_{X[m]}}
 $$</p>
-<ol>
+<ol start="4">
 <li><strong>筛选关联节点</strong>：选择相关性最高的$K$个背景节点作为<strong>关联节点。</strong></li>
 </ol>
 <p>通过遍历所有目标节点，可以获得一个关联背景节点子集 $AF$。</p>
 <p><strong>构建子图：</strong></p>
-<p>将目标节点 $T$ 和抓取到的背景节点$B&rsquo; = { BR, AF }$ 保留在原始图 $G$ 中，构建一个子图 $G&rsquo; = (V&rsquo;, E&rsquo;)$</p>
+<p>将目标节点 $T$ 和抓取到的背景节点$B&rsquo; = \{ BR, AF \}$ 保留在原始图 $G$ 中，构建一个子图 $G&rsquo; = (V&rsquo;, E&rsquo;)$</p>
 
 
 <h3 class="relative group">概念定义 
@@ -1030,11 +1033,11 @@ $$</p>
 <li><strong>$MSS$(multiple structure-set, 多重结构集)</strong>：背景节点$j$可前往的所有目标节点的集合及到达该节点的距离</li>
 </ol>
 <p>$$
-MSS_j={{⟨T_i,d_{i,j}⟩,&hellip;,⟨T_{k},d_{k,j}⟩}}
+MSS_j=\{{⟨T_i,d_{i,j}⟩,&hellip;,⟨T_{k},d_{k,j}⟩}\}
 $$</p>
-<ol>
+<ol start="2">
 <li>
-<p><strong>节点对等价类(Node Pair Equivalence Class)</strong>：给定图 $<em>G</em>$上的函数族 $F$，定义所有图节点对之间的等价关系 $≃_F$，使得对于所有 $u, v \in V$，当且仅当 $\forall f \in F，f(G,X) = f(G, \tilde{X})$，其中 $\tilde{X}$与 $X$ 相同，但 $\tilde{X}[u] = X[v]$ 和 $\tilde{X}[v] = X[u]$。</p>
+<p><strong>节点对等价类(Node Pair Equivalence Class)</strong>：给定图 $G$ 上的函数族 $F$，定义所有图节点对之间的等价关系 $\simeq _F$，使得对于所有 $u, v \in V$，当且仅当 $\forall f \in F，f(G,X) = f(G, \tilde{X})$，其中 $\tilde{X}$与 $X$ 相同，但 $\tilde{X}[u] = X[v]$ 和 $\tilde{X}[v] = X[u]$。</p>
 <p>即对于图上两个节点交换两个节点特征后函数返回相同的结果，则这两个节点对等价</p>
 </li>
 <li>
@@ -1042,28 +1045,28 @@ $$</p>
 </li>
 </ol>
 <p>$$
-X&rsquo;[v] \leftarrow f_{lmp}(X[v], X[u]) = \text{AGGREGATE}({X[v], X[u]})W
+X&rsquo;[v] \leftarrow f_{lmp}(X[v], X[u]) = \text{AGGREGATE}(\{X[v], X[u]\})W
 $$</p>
 <p>其中 $W$ 是一个变换矩阵，$\text{AGGREGATE}$  可以表述为逐元素均值或求和池化。</p>
-<ol>
+<ol start="4">
 <li><strong>线性路径消息传递(Linear message path passing)</strong>：给定一条路径 $p = \langle u_0, u_1, &hellip;, u_\ell \rangle$，对于所有 $u_i \in V$，定义从 $u_0$ 到 $u_\ell$沿路径 $p$ 聚合节点特征的线性路径传递函数 $f_{spp}(X, p)$为：</li>
 </ol>
 <p>$$
 X&rsquo;[u_i] \leftarrow f^i_{lmp}(X&rsquo;[u_{i-1}], X[u_i])W_i, \quad i \in 1, &hellip;, \ell
 $$</p>
-<ol>
+<ol start="5">
 <li>
 <p><strong>线性路径消息传递等价类(Linear message path passing equivalence class，LMPP等价类)：</strong></p>
-<p>给定一组线性路径消息传递函数$LMPP$，两个节点$u, v \in V$ 和一个共同可达节点$K \in V$，对应的路径分别为$p_{u,K} := \langle u, &hellip;, K \rangle$ 和$p_{v,K} := \langle v, &hellip;, K \rangle$，令$P := {p_{u,K}, p_{v,K}}$，定义$u≃_{LMPP,K}v$ 的LMPP等价关系为：</p>
-<p>$$
-u≃<em>{LMPP,K}v⟺∀f</em>{lmpp}∈LMPP,f_{lmpp}(X,P) =f_{lmpp}(\tilde X,P)
-$$</p>
+<p>给定一组线性路径消息传递函数$LMPP$，两个节点$u, v \in V$ 和一个共同可达节点$K \in V$，对应的路径分别为$p_{u,K} := \langle u, &hellip;, K \rangle$ 和$p_{v,K} := \langle v, &hellip;, K \rangle$，令$P := \{p_{u,K}, p_{v,K}\}$，定义$u_{LMPP,K}\simeq v$ 的LMPP等价关系为：</p>
 </li>
 </ol>
+<p>$$
+u_{LMPP,K} \simeq v⟺∀f_{lmpp}∈LMPP,f_{lmpp}(X,P) =f_{lmpp}(\tilde X,P)
+$$</p>
 <p>其中 $\tilde{X}$与 $X$ 相同，但 $\tilde{X}[u] = X[v]$ 和 $\tilde{X}[v] = X[u]$。</p>
-<ol>
+<ol start="6">
 <li>
-<p>设 $T \in \text T$ 表示图 $G$ 中的一个目标节点，$B$ 表示背景节点的集合，对于所有 $u, v \in B$，如果 $MSS_u = MSS_v \neq \emptyset$那么$u ≃_{LMPP,T}v$</p>
+<p>设 $T \in \text T$ 表示图 $G$ 中的一个目标节点，$B$ 表示背景节点的集合，对于所有 $u, v \in B$，如果 $MSS_u = MSS_v \neq \emptyset$那么$u_{LMPP,T} \simeq v$</p>
 <p>若两节点的mss相同，则它们lmpp等价</p>
 </li>
 </ol>
@@ -1080,30 +1083,30 @@ $$</p>
     
 </h3>
 <ol>
-<li><strong>策略-𝛼</strong>：因为具有相同mss的背景节点沿路径进行聚合的方式类似，聚合得到的结果也类似。将所有具有相同mss的背景节点进行聚合压缩，变为一个合成节点。给定一个背景节点的集合$B^′_k={B_i,&hellip;,B_j}$，这些节点之间具有相同的MSS，将要聚合到的点$B^′<em>k$的特征$x</em>{B^′_k}$为：</li>
+<li><strong>策略-𝛼</strong>：因为具有相同mss的背景节点沿路径进行聚合的方式类似，聚合得到的结果也类似。将所有具有相同mss的背景节点进行聚合压缩，变为一个合成节点。给定一个背景节点的集合$ B_k^{&rsquo;}=\{B_i,&hellip;,B_j\} $，这些节点之间具有相同的$MSS$，将要聚合到的点$ B_k^{&rsquo;} $ 的特征 $ x_{B_k^{&rsquo;}} $为：</li>
 </ol>
 <p>$$
 x_{B^′_k}← \text {AGGREGATE}({x_v,∀v∈B^′_k})
 $$</p>
 <p>$\text{AGGREGATE}$  可以表述为逐元素均值或求和池化。</p>
 <img src="img/image 1.png" alt="图凝聚𝛼" class="center-image"/>
-<ol>
+<ol start="2">
 <li>
-<p><strong>策略-𝛽</strong>：策略-𝛼通过多重结构集（MSS）凝聚具有相同结构信息的背景节点，但其压缩效果有限，因为只有一部分严格共享相同的 ${\langle T, d \rangle}$的背景节点会进行聚合。为提高效率，修改mss为$MSS&rsquo;<em>j={{⟨T_i⟩,&hellip;,⟨T</em>{k}⟩}}$，并在此基础上进行节点的聚合。</p>
+<p><strong>策略-𝛽</strong>：策略-𝛼通过多重结构集（MSS）凝聚具有相同结构信息的背景节点，但其压缩效果有限，因为只有一部分严格共享相同的 $\{\langle T, d \rangle\}$的背景节点会进行聚合。为提高效率，修改mss为$MSS_j^{&rsquo;}=\{{⟨T_i⟩,&hellip;,⟨T_{k}⟩}\}$，并在此基础上进行节点的聚合。</p>
 <p>但是需要注意的是，在将背景节点合并压缩时，图的相对距离信息可能会丢失。具体来说，当多个桥接节点被合并成一个节点时，原本距离较远的目标节点之间的相对距离会缩短。例如，原本相隔几跳的目标节点，在压缩后的图中可能通过一个1跳的桥接节点连接在一起。</p>
-<p>对于一个与 $B&rsquo;<em>k$ **通过边$e&rsquo;</em>{m,k}$ 连接的可达目标节点 $T_m$，设 $B&rsquo;<em>k$ 到 $T_m$ 的最短距离集合为$D_m := {d</em>{m,i}, &hellip;, d_{m,j}}$。那么边 $e&rsquo;<em>{m,k}$ 的权重$w&rsquo;</em>{m,k}$ 可以表示为：</p>
+<p>对于一个与 $B_k^{&rsquo;}$ 通过边$e_{m,k}^{&rsquo;}$ 连接的可达目标节点 $T_m$，设 $B_k^{&rsquo;}$ 到 $T_m$ 的最短距离集合为$D_m := \{d_{m,i}, &hellip;, d_{m,j}\}$。那么边 $e_{m,k}^{&rsquo;}$ 的权重$w_{m,k}^{&rsquo;}$ 可以表示为：</p>
 <p>$$
-w^′_{m.k}= \sum _{d\in D_k}\frac{1}{d}
+w_{m.k}^{&rsquo;}= \sum _{d\in D_k}\frac{1}{d}
 $$</p>
 </li>
 </ol>
 <img src="img/image 2.png" alt="图凝聚𝛽" class="center-image"/>
-<ol>
+<ol start="3">
 <li>
 <p><strong>策略-γ</strong>：尽管策略-β有效地减少了桥接节点的数量，但在进一步凝聚关联节点方面仍有改进的空间。给定一个原始子图$G^′$，我们首先执行策略-β来凝聚桥接节点，然后在生成的骨架图$S_β$中凝聚关联节点。具体而言，给定$S_β$中的一个目标节点$T_𝑘$，以及其对应的关联背景节点集$AF_𝑘$，我们通过将$T_𝑘$的特征与$AF_𝑘$的特征进行整合来更新$T_𝑘$的特征，然后在$G^′$中移除$AF_𝑘$。</p>
 <p>通过这种方式，我们在去除大量关联节点的同时，保留了大部分来自关联节点的原始相关信息。凝聚后$T_𝑘$的特征$x_{T_k}$是通过与$AF_𝑘$的原始特征聚合而成的，具体公式如下：</p>
 <p>$$
-x_{T_k} \leftarrow \text{AGGREGATE}\left({x_{T_k} \cup {x_u,  \forall u \in AF_k}}\right)
+x_{T_k} \leftarrow \text{AGGREGATE}\left(\{x_{T_k} \cup \{x_u,  \forall u \in AF_k\}\}\right)
 $$</p>
 </li>
 </ol>
