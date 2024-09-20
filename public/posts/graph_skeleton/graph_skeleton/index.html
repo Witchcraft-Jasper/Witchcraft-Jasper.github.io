@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Graph Skeleton论文阅读 &middot; Witchcraft&#39;s space</title>
+  <meta name="title" content="Graph Skeleton论文阅读 &middot; Witchcraft&#39;s space" />
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/graph_skeleton/graph_skeleton/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.c38ed8ff7af40917a0d0593149b7601fef9c4908438c5d085d54538cfb6b9c34d9a4423efc8e1552e9bdf71c4aa87efafc13406a21aa88abb85f9cc935a9844d.css"
+    integrity="sha512-w47Y/3r0CReg0FkxSbdgH&#43;&#43;cSQhDjF0IXVRTjPtrnDTZpEI&#43;/I4VUum99xxKqH76/BNAaiGqiKu4X5zJNamETQ==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.17ffe617e664d257760ee5f71869a6d9328d3613601c03a2eb7a194bbfb06ddc629a70f7b348e6e9446e81d0789555aebce09d27debd0329fc297601a1ee6a77.js"
+    integrity="sha512-F//mF&#43;Zk0ld2DuX3GGmm2TKNNhNgHAOi63oZS7&#43;wbdximnD3s0jm6URugdB4lVWuvOCdJ969Ayn8KXYBoe5qdw==" data-copy="" data-copied=""></script>
+  
+  
+  <script src="/js/zoom.min.js"></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Graph Skeleton论文阅读" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/graph_skeleton/graph_skeleton/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-09-20T11:10:15+08:00" />
+<meta property="article:modified_time" content="2024-09-20T11:10:15+08:00" />
+
+
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Graph Skeleton论文阅读"/>
+<meta name="twitter:description" content=""/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "文章",
+    "name": "Graph Skeleton论文阅读",
+    "headline": "Graph Skeleton论文阅读",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/posts\/graph_skeleton\/graph_skeleton\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Witchcraft"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-09-20T11:10:15\u002b08:00",
+    "datePublished": "2024-09-20T11:10:15\u002b08:00",
+    
+    "dateModified": "2024-09-20T11:10:15\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "7585"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Witchcraft" />
+  
+  
+  
+  <link href="mailto:dszlym666@gmail.com" rel="me" />
+  
+  
+  <link href="https://github.com/Witchcraft-Jasper" rel="me" />
+  
+  
+  <link href="https://leetcode.cn/u/witchcraft-h/" rel="me" />
+  
+  
+  <link href="https://steamcommunity.com/profiles/76561198968521201" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCr3u1oGcqZw50Or63QlnMMty6r-LpziNc",
+      authDomain: "AIzaSyCr3u1oGcqZw50Or63QlnMMty6r-LpziNc",
+      projectId: "my-github-page-57af1",
+      storageBucket: "my-github-page-57af1.appspot.com",
+      messagingSenderId: "872148441458",
+      appId: "1:872148441458:web:6b03f758713b85a8da65eb",
+      measurementId: "G-ZVEQDKKLC7"
+    };
+
+    var app = firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    var auth = firebase.auth();
+
+  </script>
+  
+  
+</head>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
+  </div>
+  
+  
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Witchcraft&rsquo;s space</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        文章
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/funs/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        杂项
+    </p>
+</a>
+
+
+
+            
+            
+  <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        时间线
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        标签
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            文章
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/funs/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            杂项
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            时间线
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            标签
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+ 
+  
+   
+  
+ 
+
+
+        
+        <figure>
+            <img class="w-full rounded-lg single_hero_round nozoom" alt="Graph Skeleton论文阅读" src="/img/background.svg">
+            
+        </figure>
+        
+    
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      Graph Skeleton论文阅读
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-09-20 11:10:15 &#43;0800 CST">2024-09-20</time><span class="px-2 text-primary-500">&middot;</span><span>7585 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">16 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  
+  
+    
+    
+      
+      
+        
+        
+      
+      
+    
+  
+  <span id="views_posts/graph_skeleton/graph_skeleton.md" class="animate-pulse inline-block text-transparent max-h-3 rounded-full mt-[-2px] align-middle bg-neutral-300 dark:bg-neutral-400" title="views">loading</span>
+  <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
+  </span>
+
+</span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="Witchcraft" src="/img/author_hu92cb7fe947be14cb9bb2b87469f7f642_141939_192x192_fill_q75_box_center.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      作者
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Witchcraft
+    </div>
+    
+    
+    <div class="text-sm text-neutral-700 dark:text-neutral-400">All that we see or seem, is but a dream within a dream.</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:dszlym666@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/Witchcraft-Jasper"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://leetcode.cn/u/witchcraft-h/"
+          target="_blank"
+          aria-label="Code"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+<path fill="currentColor"  d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://steamcommunity.com/profiles/76561198968521201"
+          target="_blank"
+          aria-label="Steam"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111.2 248-248.4 248-113.8 0-209.6-76.3-239-180.4l95.2 39.3c6.4 32.1 34.9 56.4 68.9 56.4 39.2 0 71.9-32.4 70.2-73.5l84.5-60.2c52.1 1.3 95.8-40.9 95.8-93.5 0-51.6-42-93.5-93.7-93.5s-93.7 42-93.7 93.5v1.2L176.6 279c-15.5-.9-30.7 3.4-43.5 12.1L0 236.1C10.2 108.4 117.1 8 247.6 8 384.8 8 496 119 496 256zM155.7 384.3l-30.5-12.6a52.79 52.79 0 0 0 27.2 25.8c26.9 11.2 57.8-1.6 69-28.4 5.4-13 5.5-27.3.1-40.3-5.4-13-15.5-23.2-28.5-28.6-12.9-5.4-26.7-5.2-38.9-.6l31.5 13c19.8 8.2 29.2 30.9 20.9 50.7-8.3 19.9-31 29.2-50.8 21zm173.8-129.9c-34.4 0-62.4-28-62.4-62.3s28-62.3 62.4-62.3 62.4 28 62.4 62.3-27.9 62.3-62.4 62.3zm.1-15.6c25.9 0 46.9-21 46.9-46.8 0-25.9-21-46.8-46.9-46.8s-46.9 21-46.9 46.8c.1 25.8 21.1 46.8 46.9 46.8z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#empirical-analysis">Empirical Analysis</a>
+      <ul>
+        <li><a href="#两个疑问"><strong>两个疑问</strong></a></li>
+        <li><a href="#数据集">数据集</a></li>
+        <li><a href="#其他猜想">其他猜想</a></li>
+        <li><a href="#分析结论">分析结论</a></li>
+      </ul>
+    </li>
+    <li><a href="#methodology">Methodology</a>
+      <ul>
+        <li><a href="#问题定义">问题定义</a></li>
+        <li><a href="#框架概述">框架概述</a></li>
+        <li><a href="#1-节点提取">1. 节点提取</a></li>
+        <li><a href="#概念定义">概念定义</a></li>
+        <li><a href="#2-图凝聚策略">2. 图凝聚策略</a></li>
+      </ul>
+    </li>
+    <li><a href="#experiments">Experiments</a>
+      <ul>
+        <li><a href="#实验准备">实验准备</a></li>
+        <li><a href="#baseline方法">baseline方法</a></li>
+        <li><a href="#图压缩对比">图压缩对比</a></li>
+        <li><a href="#存储消耗对比">存储消耗对比</a></li>
+        <li><a href="#三种图凝聚策略对比">三种图凝聚策略对比</a></li>
+      </ul>
+    </li>
+    <li><a href="#拓展与思考">拓展与思考</a>
+      <ul>
+        <li><a href="#eta背景下交通图特点">ETA背景下交通图特点</a></li>
+        <li><a href="#有何思路可以借鉴">有何思路可以借鉴？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#empirical-analysis">Empirical Analysis</a>
+      <ul>
+        <li><a href="#两个疑问"><strong>两个疑问</strong></a></li>
+        <li><a href="#数据集">数据集</a></li>
+        <li><a href="#其他猜想">其他猜想</a></li>
+        <li><a href="#分析结论">分析结论</a></li>
+      </ul>
+    </li>
+    <li><a href="#methodology">Methodology</a>
+      <ul>
+        <li><a href="#问题定义">问题定义</a></li>
+        <li><a href="#框架概述">框架概述</a></li>
+        <li><a href="#1-节点提取">1. 节点提取</a></li>
+        <li><a href="#概念定义">概念定义</a></li>
+        <li><a href="#2-图凝聚策略">2. 图凝聚策略</a></li>
+      </ul>
+    </li>
+    <li><a href="#experiments">Experiments</a>
+      <ul>
+        <li><a href="#实验准备">实验准备</a></li>
+        <li><a href="#baseline方法">baseline方法</a></li>
+        <li><a href="#图压缩对比">图压缩对比</a></li>
+        <li><a href="#存储消耗对比">存储消耗对比</a></li>
+        <li><a href="#三种图凝聚策略对比">三种图凝聚策略对比</a></li>
+      </ul>
+    </li>
+    <li><a href="#拓展与思考">拓展与思考</a>
+      <ul>
+        <li><a href="#eta背景下交通图特点">ETA背景下交通图特点</a></li>
+        <li><a href="#有何思路可以借鉴">有何思路可以借鉴？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h1 class="relative group">Graph-Skeleton: ∼1% Nodes are Sufficient to Represent Billion-Scale Graph论文阅读 
+    <div id="graph-skeleton-1-nodes-are-sufficient-to-represent-billion-scale-graph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#graph-skeleton-1-nodes-are-sufficient-to-represent-billion-scale-graph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB" aria-label="锚点">#</a>
+    </span>        
+    
+</h1>
+
+
+<h2 class="relative group">Abstract 
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#abstract" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>图数据的在网络上的普遍存在让其有着很广泛的应用，包括网页搜索、社交网络分析、区块链、推荐系统、交通流预测等。然而，在大规模网络图上部署图模型仍然是一个巨大的挑战。尽管有许多研究致力于提高图模型的可扩展性，但学术研究与工业场景之间仍然存在明显的差距。一个主要原因是，在大多数工业场景中，网络图中的只有一小部分节点需要被分析，我们称这些节点为<strong>目标节点</strong>，而其他节点为<strong>背景节点</strong>。</p>
+<p>在本文中，我们提出，通过从海量网络图数据中合理获取并压缩背景节点，可能是从根本上解决这些障碍的更经济的捷径。为此，我们首次尝试研究目标节点分类中的大规模背景节点压缩问题。通过广泛的实验，我们揭示了背景节点在目标节点分类中扮演的两个关键角色：增强目标节点之间的结构连通性，以及与目标节点的特征相关性。基于此，我们提出了一种新颖的Graph-Skeleton模型，该模型合理地获取背景节点，并进一步压缩相似目标-背景局部结构中背景节点的语义和拓扑信息。在各种网络图数据集上的大量实验表明了该方法的有效性和效率。特别是在包含2.4亿个节点的MAG240M数据集上，我们生成的骨架图在仅包含原始图1.8%节点的情况下，仍然实现了高度可比的性能。</p>
+
+
+<h2 class="relative group">Introduction 
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#introduction" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>图数据的普遍存在，尤其是在网络图形式下，使得网络图挖掘成为一个热门的研究话题。这些网络图在诸多应用中至关重要，包括网页搜索、社交网络分析、区块链、推荐系统等。然而，在大规模网络图上部署图模型仍然是一个巨大的挑战。实际上，网络图数据可能极其庞大。以Facebook为例，每月有超过29.3亿的活跃用户。</p>
+<p>尽管在提升图模型在大规模网络图挖掘任务上的可扩展性方面已经取得了显著进展，例如节点采样、模型简化等，但学术研究与实际应用之间仍然存在很大的差距。一个主要原因是在大多数工业场景中，并非网络图中的所有节点都需要被分析。</p>
+<p>我们以DGraph（一个真实的金融与社交网络数据集，用户作为节点，用户之间的社交关系作为边）为例，进一步说明这一点。以贷款用户中的欺诈者识别任务为例，只有那些有贷款记录的用户需要被分类，而没有贷款行为的其他用户则不需要。在这种情况下，我们将贷款用户称为目标节点，而将其他用户称为背景节点。这种目标与背景的属性在网络图挖掘场景中普遍存在。此外，背景节点的数量通常远远大于目标节点。例如，在MAG240M数据集中，要预测论文的学科领域，只有140万篇Arxiv论文需要被分类，而总节点数却有2.4亿个。</p>
+
+
+<h2 class="relative group">Empirical Analysis 
+    <div id="empirical-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#empirical-analysis" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group"><strong>两个疑问</strong> 
+    <div id="%E4%B8%A4%E4%B8%AA%E7%96%91%E9%97%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%A4%E4%B8%AA%E7%96%91%E9%97%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>背景节点对于目标节点的分类是否是必要的？</li>
+<li>背景节点在目标节点的分类中发挥什么作用？</li>
+</ol>
+<p>为了回答这两个问题，作者使用SAGE、GAT、GIN三种采用不同聚合方式（求平均、加权求和、求和）的用于进行分类任务的模型对以上疑问进行分析。</p>
+
+
+<h3 class="relative group">数据集 
+    <div id="%E6%95%B0%E6%8D%AE%E9%9B%86" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%95%B0%E6%8D%AE%E9%9B%86" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>金融贷款网络 DGraph：我们遵循原始数据集的任务设置，即在贷款用户中识别欺诈者，因此有贷款行为的用户被视为目标节点（约33%），而其他用户则为背景节点。</li>
+<li>学术引用网络 ogbn-arxiv：我们旨在预测2018年以后发表的论文的学科领域，在这种情况下，2018年后发表的论文被视为目标节点（约46%），而2018年之前的论文则为背景节点。</li>
+</ol>
+<p><strong>对于疑问一：</strong></p>
+<p>尝试进行随机切割边、切割所有边B-B、切割所有边T-B、切割所有边T-T，并与原始的图进行对比。最终发现，切割T-B、T-T均会对预测准确率有显著下降，而切割B-B则不会，甚至在某些数据集上还有提升。</p>
+<p><strong>对于疑问二：</strong></p>
+<p>实验发现对于连接了两个T的B(桥接节点)，如果删除了这些T-B边(BridB)，模型预测的准确率会有显著下降，说明这些T-B关系对于模型的性能具有显著贡献。另外，从图中的结果可以看出，切割BridB的效果均好于T-B，说明维持T-T之间的连通性也是十分有必要的。</p>
+<img src="img/image 0.png" alt="场景图概述" class="center-image"/>
+
+
+<h3 class="relative group">其他猜想 
+    <div id="%E5%85%B6%E4%BB%96%E7%8C%9C%E6%83%B3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%85%B6%E4%BB%96%E7%8C%9C%E6%83%B3" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>假设背景节点与其相似的目标节点之间具有更高的特征相关性，为此计算了目标节点与其不同跳数的背景节点之间的Pearson系数。从结果来看，越靠近目标节点的背景节点往往会具有更高的相关性。这表明与单个目标相邻的背景节点的特征可能与目标本身的特征相关，从而影响模型的性能。</p>
+
+
+<h3 class="relative group">分析结论 
+    <div id="%E5%88%86%E6%9E%90%E7%BB%93%E8%AE%BA" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%88%86%E6%9E%90%E7%BB%93%E8%AE%BA" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>大多数背景节点是多余的</li>
+<li>背景节点在目标节点分类任务中以如下两种方式发挥作用
+<ol>
+<li>作为桥接节点(brige)提供目标节点之间的联通性</li>
+<li>与单独的目标节点相连，作为关联节点(affiliation)提供特征相关性</li>
+</ol>
+</li>
+</ol>
+
+
+<h2 class="relative group">Methodology 
+    <div id="methodology" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#methodology" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">问题定义 
+    <div id="%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>在大规模图$G = (V, E)$ 中，针对一个特定的节点分类任务，我们可以得到一个相应的节点集合 $T = {T_1, T_2, \dots, T_n}$，其中包含了需要进行分类的节点。在大多数实际场景中，节点集合 $T$ 的大小远小于图中所有节点的总数 $|V|$。</p>
+<p>在这篇论文中，我们将 $T$ 称为<strong>目标节点</strong>(target nodes)，而图 $G$  中的其他节点则称为<strong>背景节点</strong>(background nodes)，记作 $B := V \setminus T = {B_1, B_2, \dots, B_{|V| - n}}$。图 G 同时还与节点特征 $X \in \mathbb{R}^{|V| \times d}$ 和目标节点标签$Y\in {0, \dots, C - 1}^n$相关联。考虑到大多数节点都是背景节点，我们的<strong>目标</strong>是<strong>生成一个具有高度信息量的合成图 $G&rsquo;$，同时显著减少背景节点的数量。<strong>除此之外，论文主要关注对目标节点的分类情况，因此</strong>仅对背景节点进行压缩</strong>，而<strong>保留了所有原始的目标节点。</strong></p>
+
+
+<h3 class="relative group">框架概述 
+    <div id="%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>为了应对大规模网络图中的问题，作者提出了一种新颖的<strong>Graph-Skeleton</strong>框架，用于从庞大的网络图中生成一个具有更小规模但信息丰富的骨架子图(skeleton subgraph)，以便进行目标分类。</p>
+<ul>
+<li><strong>第一步-节点提取</strong>：框架首先提取所有的目标节点以及部分背景节点，构建一个基础子图(vanilla subgraph)。作者根据结构连通性和特征相关性提出了一种提取原则，来合理提取对应的节点。（<strong>下图Node Fetching部分）</strong></li>
+<li><strong>第二步-图凝聚</strong>：Graph-Skeleton对基础子图的信息进行压缩，以减少冗余。具体来说，作者设计了三种图凝聚策略（即𝛼, 𝛽, 𝛾），压缩程度从低到高不等。（<strong>下图Graph Condensation部分）</strong></li>
+<li><strong>第三步-分类任务</strong>：压缩后的图具有高度的信息量，同时享有小规模带来的存储和图模型部署的优势。可将其应用于各种GNN模型进行分类任务。</li>
+</ul>
+
+
+<h3 class="relative group">1. 节点提取 
+    <div id="1-%E8%8A%82%E7%82%B9%E6%8F%90%E5%8F%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#1-%E8%8A%82%E7%82%B9%E6%8F%90%E5%8F%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>上一部分得出的结论是<strong>背景节点是高度冗余</strong>的，因此初步的想法是进行关键节点的提取，从庞大的原始数据中适当地提取桥接和关联背景节点。利用这些节点，我们可以构建一个包含所有目标节点以及一小部分背景节点的<strong>初始子图</strong>(vanilla subgraph)。</p>
+<p>为了解决过度扩展问题，为了解决过度扩展问题，我们根据自定义的节点提取深度和宽度(即 $d_1、d_2、K \in \mathbb{N}$)进行节点的提取。具体遵循以下两个原则：</p>
+<ol>
+<li><strong>结构连通性</strong>：在$d_1$跳内连接两个或多个目标节点的视为<strong>桥接节点</strong>进行保留。</li>
+<li><strong>特征相关性</strong>：对于每个单独的目标节点，在$d_2$跳范围内，与目标节点特征相关性最高的$K$个背景节点视为<strong>关联节点</strong>进行保留。</li>
+</ol>
+<p>因此首要目标是找到每个目标节点的所有可访问的背景节点(可访问指的是可从<strong>仅由背景节点</strong>组成的路径到达)。</p>
+<p>*本论文中将超参数规定为$d_1=3, d_2=1,k=2$</p>
+<p><strong>对于原则1-结构连通性</strong>：</p>
+<ol>
+<li><strong>找背景节点</strong>：通过对每个目标节点使用BFS找所有可到达的背景节点</li>
+<li><strong>找最短路径</strong>：假设背景节点 $B_j$ 可以访问目标节点集合为${T_{k1}, T_{k2}, &hellip;, T_{ki}}$，则对应的最短路径集可以表示为 $P_{Bj} = {p_{k1,j}, p_{k2,j}, &hellip;, p_{ki,j}}$，计算这些路径长度$d(P_{Bj}) = {d(p_{k1,j}), &hellip;, d(p_{ki,j})}$ （其中 d(t) 是距离函数），并将这些路径长度的最小值和第二小值相加，得到$sd_j = \min [ d(P_{Bj}) ] + \min 2nd [ d(P_{Bj}) ]$</li>
+<li><strong>判断是否为桥接节点</strong>：如果$sd_j≤d_1$，这意味着背景节点 $B_j$ 在 $d_1$跳范围内至少连接了两个目标节点，因此将其视为桥接节点。</li>
+</ol>
+<p>通过遍历所有背景节点，可以得到一个包含所有<strong>桥接节点</strong>的节点子集$BR$。</p>
+<p><strong>对于原则2-特征相关性</strong>：</p>
+<ol>
+<li><strong>找背景节点</strong>：通过对每个目标节点 $T_i$ 执行BFS，获得 $T_i$ 到其所有可访问背景节点的最短路径集合。设 $J := { j_1, j_2, &hellip;, j_k }$ 为 $T_i$ **可访问背景节点的索引集合，对应的最短路径集合为 $P_{T_i} := { p_{i,j} }$，其中 $j \in J, p_{i,j}$ 表示从 $T_i$ 到某个可访问背景节点 $B_j$ 的最短路径。</li>
+<li><strong>判断距离</strong>：选择那些最短路径距离在 $d_2$ 以内的可访问背景节点，即 ${ B_m, m \in J, s.t., d(p_{i,m}) \leq d_2 }$</li>
+<li><strong>计算相关性</strong>：为了选择最重要的 $K$ 个背景节点，我们需要计算每个被选中的 $B_m$ 与 $T_i$ 之间的特征皮尔逊相关系数 (PCC):</li>
+</ol>
+<p>$$
+PCC_im=\frac{cov(X[i],X[m])}{σ_{X[i]}⋅σ_{X[m]}}
+$$</p>
+<ol>
+<li><strong>筛选关联节点</strong>：选择相关性最高的$K$个背景节点作为<strong>关联节点。</strong></li>
+</ol>
+<p>通过遍历所有目标节点，可以获得一个关联背景节点子集 $AF$。</p>
+<p><strong>构建子图：</strong></p>
+<p>将目标节点 $T$ 和抓取到的背景节点$B&rsquo; = { BR, AF }$ 保留在原始图 $G$ 中，构建一个子图 $G&rsquo; = (V&rsquo;, E&rsquo;)$</p>
+
+
+<h3 class="relative group">概念定义 
+    <div id="%E6%A6%82%E5%BF%B5%E5%AE%9A%E4%B9%89" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%A6%82%E5%BF%B5%E5%AE%9A%E4%B9%89" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>为了减少信息冗余，我们为构建的原始子图 $G&rsquo;$ 设计了一个凝缩过程，有效地凝缩了结构信息和语义信息。具体来说，我们提出了三种图凝缩策略，分别标记为 $\alpha$、$\beta$ 和 $\gamma$，它们提供了从低到高不同程度的凝缩效果。</p>
+<ol>
+<li><strong>$MSS$(multiple structure-set, 多重结构集)</strong>：背景节点$j$可前往的所有目标节点的集合及到达该节点的距离</li>
+</ol>
+<p>$$
+MSS_j={{⟨T_i,d_{i,j}⟩,&hellip;,⟨T_{k},d_{k,j}⟩}}
+$$</p>
+<ol>
+<li>
+<p><strong>节点对等价类(Node Pair Equivalence Class)</strong>：给定图 $<em>G</em>$上的函数族 $F$，定义所有图节点对之间的等价关系 $≃_F$，使得对于所有 $u, v \in V$，当且仅当 $\forall f \in F，f(G,X) = f(G, \tilde{X})$，其中 $\tilde{X}$与 $X$ 相同，但 $\tilde{X}[u] = X[v]$ 和 $\tilde{X}[v] = X[u]$。</p>
+<p>即对于图上两个节点交换两个节点特征后函数返回相同的结果，则这两个节点对等价</p>
+</li>
+<li>
+<p><strong>线性消息传递(Linear message passing operation, $lmp$)</strong> 给定两个连接的节点 $u$ 和 $v$，定义从 $u$ 到 $v$ 的线性消息传递操作$f_{lmp}(u, v)$ 为：</p>
+</li>
+</ol>
+<p>$$
+X&rsquo;[v] \leftarrow f_{lmp}(X[v], X[u]) = \text{AGGREGATE}({X[v], X[u]})W
+$$</p>
+<p>其中 $W$ 是一个变换矩阵，$\text{AGGREGATE}$  可以表述为逐元素均值或求和池化。</p>
+<ol>
+<li><strong>线性路径消息传递(Linear message path passing)</strong>：给定一条路径 $p = \langle u_0, u_1, &hellip;, u_\ell \rangle$，对于所有 $u_i \in V$，定义从 $u_0$ 到 $u_\ell$沿路径 $p$ 聚合节点特征的线性路径传递函数 $f_{spp}(X, p)$为：</li>
+</ol>
+<p>$$
+X&rsquo;[u_i] \leftarrow f^i_{lmp}(X&rsquo;[u_{i-1}], X[u_i])W_i, \quad i \in 1, &hellip;, \ell
+$$</p>
+<ol>
+<li>
+<p><strong>线性路径消息传递等价类(Linear message path passing equivalence class，LMPP等价类)：</strong></p>
+<p>给定一组线性路径消息传递函数$LMPP$，两个节点$u, v \in V$ 和一个共同可达节点$K \in V$，对应的路径分别为$p_{u,K} := \langle u, &hellip;, K \rangle$ 和$p_{v,K} := \langle v, &hellip;, K \rangle$，令$P := {p_{u,K}, p_{v,K}}$，定义$u≃_{LMPP,K}v$ 的LMPP等价关系为：</p>
+<p>$$
+u≃<em>{LMPP,K}v⟺∀f</em>{lmpp}∈LMPP,f_{lmpp}(X,P) =f_{lmpp}(\tilde X,P)
+$$</p>
+</li>
+</ol>
+<p>其中 $\tilde{X}$与 $X$ 相同，但 $\tilde{X}[u] = X[v]$ 和 $\tilde{X}[v] = X[u]$。</p>
+<ol>
+<li>
+<p>设 $T \in \text T$ 表示图 $G$ 中的一个目标节点，$B$ 表示背景节点的集合，对于所有 $u, v \in B$，如果 $MSS_u = MSS_v \neq \emptyset$那么$u ≃_{LMPP,T}v$</p>
+<p>若两节点的mss相同，则它们lmpp等价</p>
+</li>
+</ol>
+
+
+<h3 class="relative group">2. 图凝聚策略 
+    <div id="2-%E5%9B%BE%E5%87%9D%E8%81%9A%E7%AD%96%E7%95%A5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#2-%E5%9B%BE%E5%87%9D%E8%81%9A%E7%AD%96%E7%95%A5" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li><strong>策略-𝛼</strong>：因为具有相同mss的背景节点沿路径进行聚合的方式类似，聚合得到的结果也类似。将所有具有相同mss的背景节点进行聚合压缩，变为一个合成节点。给定一个背景节点的集合$B^′_k={B_i,&hellip;,B_j}$，这些节点之间具有相同的MSS，将要聚合到的点$B^′<em>k$的特征$x</em>{B^′_k}$为：</li>
+</ol>
+<p>$$
+x_{B^′_k}← \text {AGGREGATE}({x_v,∀v∈B^′_k})
+$$</p>
+<p>$\text{AGGREGATE}$  可以表述为逐元素均值或求和池化。</p>
+<img src="img/image 1.png" alt="图凝聚𝛼" class="center-image"/>
+<ol>
+<li>
+<p><strong>策略-𝛽</strong>：策略-𝛼通过多重结构集（MSS）凝聚具有相同结构信息的背景节点，但其压缩效果有限，因为只有一部分严格共享相同的 ${\langle T, d \rangle}$的背景节点会进行聚合。为提高效率，修改mss为$MSS&rsquo;<em>j={{⟨T_i⟩,&hellip;,⟨T</em>{k}⟩}}$，并在此基础上进行节点的聚合。</p>
+<p>但是需要注意的是，在将背景节点合并压缩时，图的相对距离信息可能会丢失。具体来说，当多个桥接节点被合并成一个节点时，原本距离较远的目标节点之间的相对距离会缩短。例如，原本相隔几跳的目标节点，在压缩后的图中可能通过一个1跳的桥接节点连接在一起。</p>
+<p>对于一个与 $B&rsquo;<em>k$ **通过边$e&rsquo;</em>{m,k}$ 连接的可达目标节点 $T_m$，设 $B&rsquo;<em>k$ 到 $T_m$ 的最短距离集合为$D_m := {d</em>{m,i}, &hellip;, d_{m,j}}$。那么边 $e&rsquo;<em>{m,k}$ 的权重$w&rsquo;</em>{m,k}$ 可以表示为：</p>
+<p>$$
+w^′_{m.k}= \sum _{d\in D_k}\frac{1}{d}
+$$</p>
+</li>
+</ol>
+<img src="img/image 2.png" alt="图凝聚𝛽" class="center-image"/>
+<ol>
+<li>
+<p><strong>策略-γ</strong>：尽管策略-β有效地减少了桥接节点的数量，但在进一步凝聚关联节点方面仍有改进的空间。给定一个原始子图$G^′$，我们首先执行策略-β来凝聚桥接节点，然后在生成的骨架图$S_β$中凝聚关联节点。具体而言，给定$S_β$中的一个目标节点$T_𝑘$，以及其对应的关联背景节点集$AF_𝑘$，我们通过将$T_𝑘$的特征与$AF_𝑘$的特征进行整合来更新$T_𝑘$的特征，然后在$G^′$中移除$AF_𝑘$。</p>
+<p>通过这种方式，我们在去除大量关联节点的同时，保留了大部分来自关联节点的原始相关信息。凝聚后$T_𝑘$的特征$x_{T_k}$是通过与$AF_𝑘$的原始特征聚合而成的，具体公式如下：</p>
+<p>$$
+x_{T_k} \leftarrow \text{AGGREGATE}\left({x_{T_k} \cup {x_u,  \forall u \in AF_k}}\right)
+$$</p>
+</li>
+</ol>
+<img src="img/image 0.png" alt="图凝聚γ" class="center-image"/>
+<p>许多具有代表性的图神经网络（GNNs）采用传播过程来合并来自邻居节点的信息。直观上，直接将关联节点的特征聚合到相邻的目标节点上，会与递归聚合（即通过多次传播过程逐步聚合信息）的结果相似。</p>
+
+
+<h2 class="relative group">Experiments 
+    <div id="experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#experiments" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">实验准备 
+    <div id="%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>为了全面评估所提出的 Graph-Skeleton 的性能，我们在六个 Web 数据集上进行了目标节点分类任务：DGraph、ogbn-mag、ogbn-arxiv、MAG240M、DBLP 和 IMDb，只考虑删除所有的背景节点的情况。数据集的规模如下：</p>
+<img src="img/image 3.png" alt="数据集准备" class="center-image"/>
+
+
+<h3 class="relative group">baseline方法 
+    <div id="baseline%E6%96%B9%E6%B3%95" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#baseline%E6%96%B9%E6%B3%95" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>在实验设置中，我们将目标节点分类性能与原始图和其他图压缩基线方法进行了比较，包括核心集方法（随机、使用PageRank中心性的中心性排序（Central-P）和使用度中心性的中心性排序（Central-D））、图粗化方法（变异邻域粗化（GC-VN）、代数JC粗化（GC-AJC）、使用舒尔补数的谱粗化（SchurC））、图凝聚方法（GCond、DosCond）以及图主动学习方法（GPA）等。需要注意的是，我们的目标是<strong>在压缩背景节点的同时保留所有目标节点</strong>。压缩率通过背景节点压缩率（BCR）来表示，即合成背景节点与原始背景节点的比例。</p>
+<p>在通过上述方法获得压缩图后，我们采用图神经网络（GNNs）来评估其目标分类性能。考虑到不同的数据集适用于不同的GNNs，对于DGraph、ogbn-arxiv、ogbn-mag和MAG240M，我们选择各自官方排行榜上表现最好的GNNs进行评估。对于IMDB和DBLP，我们采用最具代表性的GNNs（GCN、GraphSAGE、GAT）进行评估。DGraph的目标分类性能通过AUC（%）来评估，其他数据集则通过ACC（%）来评估。</p>
+
+
+<h3 class="relative group">图压缩对比 
+    <div id="%E5%9B%BE%E5%8E%8B%E7%BC%A9%E5%AF%B9%E6%AF%94" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%9B%BE%E5%8E%8B%E7%BC%A9%E5%AF%B9%E6%AF%94" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>我们首先在表2中报告了在固定压缩率（BCR）下，压缩图在六个数据集上的目标节点分类结果。在此，我们将使用策略-𝛾的Graph-Skeleton（简称Skeleton-𝛾，具有最高压缩率）的性能与其他基线方法进行了比较。</p>
+<p>正如我们所见，Skeleton-𝛾在将GNNs扩展到所有数据集方面表现出强大的能力。此外，在相似的BCR下，它还比其他压缩基线方法实现了更优越的目标分类性能。此外，与其他因内存和计算负担严重受限的图粗化和压缩方法相比，我们的方法在部署于大规模网络图时更具友好性。值得注意的是，与原始图相比，Skeleton-𝛾在显著减少背景节点数量的同时，也表现出高度可比甚至更好的目标分类性能。</p>
+<img src="img/image 4.png" alt="图压缩对比" class="center-image"/>
+<p>此外，我们在图6中报告了压缩图在不同BCR（背景节点压缩率）下的目标分类结果。通过选择Graph-Skeleton的不同压缩策略以及不同的节点抓取深度（𝑑1, 𝑑2），我们可以灵活地实现不同的压缩率。可以很容易地观察到，在更广泛的压缩率范围内，我们的方法显著优于其他方法。</p>
+<img src="img/image 5.png" alt="图压缩对比2" class="center-image"/>
+
+
+<h3 class="relative group">存储消耗对比 
+    <div id="%E5%AD%98%E5%82%A8%E6%B6%88%E8%80%97%E5%AF%B9%E6%AF%94" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%AD%98%E5%82%A8%E6%B6%88%E8%80%97%E5%AF%B9%E6%AF%94" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>我们报告了在固定背景节点压缩率（𝐵𝐶𝑅）下，原始图和Skeleton-𝛾在六个数据集上的网页图存储的内存成本。为了更直观地呈现结果，我们将图数据的存储成本分解为三个主要方面：目标节点特征的成本、背景节点特征的成本和图的邻接矩阵的成本。结果如表3所示。可以看到，Skeleton-𝛾显著减少了背景节点特征和图邻接矩阵的内存成本（表3中的绿色部分）。由于在压缩后的Skeleton-𝛾中保留了所有的目标节点，目标节点特征的存储成本与原始图保持一致。另一方面，Skeleton-𝛾还在性能上达到了与原始数据接近甚至更好的效果。这突显了我们提出的方法在保留目标节点分类所需的关键信息方面的有效性。</p>
+<img src="img/image 6.png" alt="图存储对比" class="center-image"/>
+
+
+<h3 class="relative group">三种图凝聚策略对比 
+    <div id="%E4%B8%89%E7%A7%8D%E5%9B%BE%E5%87%9D%E8%81%9A%E7%AD%96%E7%95%A5%E5%AF%B9%E6%AF%94" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%89%E7%A7%8D%E5%9B%BE%E5%87%9D%E8%81%9A%E7%AD%96%E7%95%A5%E5%AF%B9%E6%AF%94" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>我们研究了Graph-Skeleton提出的三种压缩策略𝛼、𝛽和𝛾的压缩性能。具体来说，我们使用相同的基础子图作为输入，并采用这三种策略进行压缩。图中左轴（蓝色）表示背景节点压缩率（𝐵𝐶𝑅，柱状图），右轴（红色）表示目标节点分类性能（虚线）。正如我们所见，Skeleton-𝛼、𝛽、𝛾在目标节点分类性能上都与原始数据表现出极具竞争力的效果，表明这三种压缩策略的有效性。通常来说，Skeleton-𝛼在三种策略中表现出最佳的分类性能，这是由于信息损失较少。另一方面，Skeleton-𝛾在所有测试的下游GNN中也很好地逼近了原始性能，同时具有显著更高的𝐵𝐶𝑅，表明将附属背景节点的特征聚合到相邻目标节点上可以很好地保留原始背景节点的信息。</p>
+<img src="img/image 7.png" alt="策略对比" class="center-image"/>
+
+
+<h2 class="relative group">拓展与思考 
+    <div id="%E6%8B%93%E5%B1%95%E4%B8%8E%E6%80%9D%E8%80%83" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%8B%93%E5%B1%95%E4%B8%8E%E6%80%9D%E8%80%83" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>图压缩的策略能否用于表示路网结构，以解决ETA相关问题？</p>
+
+
+<h3 class="relative group">ETA背景下交通图特点 
+    <div id="eta%E8%83%8C%E6%99%AF%E4%B8%8B%E4%BA%A4%E9%80%9A%E5%9B%BE%E7%89%B9%E7%82%B9" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#eta%E8%83%8C%E6%99%AF%E4%B8%8B%E4%BA%A4%E9%80%9A%E5%9B%BE%E7%89%B9%E7%82%B9" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li><strong>数据量大：<strong>交通图包含时空两个维度的数据，以北京为例，其包含</strong><code>2733734</code></strong> 条link，单日数据维度 <strong>2733734 * 1440</strong>，难以直接以图的方式输入模型计算</li>
+<li>**时间空间特征明显：**交通图在时间上和空间上均存在明显特征。时间上，从星期来看存在工作日和休息日的星期差异；从天来看存在早晚高峰和其他时段的时间差异。空间上，某一路段周围道路的路况变化往往会对其造成影响；一条路段上的多个link存在前后关联</li>
+<li><strong>存在大量数据冗余：<strong>以北京20240801数据为例，当日无路况发布的link为</strong><code>2033166</code></strong> (约占74%)，这些link在图中的作用仅仅表现为图结构上的联通性</li>
+</ol>
+
+
+<h3 class="relative group">有何思路可以借鉴？ 
+    <div id="%E6%9C%89%E4%BD%95%E6%80%9D%E8%B7%AF%E5%8F%AF%E4%BB%A5%E5%80%9F%E9%89%B4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%9C%89%E4%BD%95%E6%80%9D%E8%B7%AF%E5%8F%AF%E4%BB%A5%E5%80%9F%E9%89%B4" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>学习论文中<strong>节点提取</strong>的思想，只保留具有<strong>结构连通性</strong>和<strong>特征相关性</strong>的link构成图结构</li>
+<li>学习论文中<strong>图凝聚</strong>的思想，构建不同link的<strong>特征相关函数</strong>，并依据相关性进行link聚合</li>
+</ol>
+
+        </div>
+        
+        
+
+        
+        
+
+        
+
+
+<h2 class="mt-8 text-2xl font-extrabold mb-10">相关文章</h2>
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/posts/gnn_pt2/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/ocean_hu3d03a01dcc18bc5be0e67db3d8d209a6_5097493_600x0_resize_q75_box.jpg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/gnn_pt2/">图神经网络学习笔记（2）</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-06-11 15:36:58 &#43;0800 CST">2024-06-11</time><span class="px-2 text-primary-500">&middot;</span><span>173 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  
+  
+    
+    
+      
+      
+        
+        
+      
+      
+    
+  
+  <span id="views_posts/gnn_pt2/index.md" class="animate-pulse inline-block text-transparent max-h-3 rounded-full mt-[-2px] align-middle bg-neutral-300 dark:bg-neutral-400" title="views">loading</span>
+  <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
+  </span>
+
+</span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    机器学习
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    图神经网络
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    学习笔记
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/funs/boardgame/splendor/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/funs/boardgame/splendor/feature_hu2750d2bcfedcb90a6d15032d37e31683_11352_600x0_resize_q75_box.jpeg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/funs/boardgame/splendor/">璀璨宝石牌型分析</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-05-27 17:06:53 &#43;0800 CST">2024-05-27</time><span class="px-2 text-primary-500">&middot;</span><span>2938 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  
+  
+    
+    
+      
+      
+        
+        
+      
+      
+    
+  
+  <span id="views_funs/boardgame/splendor/index.md" class="animate-pulse inline-block text-transparent max-h-3 rounded-full mt-[-2px] align-middle bg-neutral-300 dark:bg-neutral-400" title="views">loading</span>
+  <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
+  </span>
+
+</span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A1%8C%E6%B8%B8/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    桌游
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/posts/vscode_tutorial/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/vscode_tutorial/feature_hu35229f58af80606b148434bd6aa7de4b_37231_600x0_resize_box_3.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/vscode_tutorial/">Mac版Vscode快捷键速查</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-05-07 10:34:21 &#43;0800 CST">2024-05-07</time><span class="px-2 text-primary-500">&middot;</span><span>1756 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  
+  
+    
+    
+      
+      
+        
+        
+      
+      
+    
+  
+  <span id="views_posts/vscode_tutorial/index.md" class="animate-pulse inline-block text-transparent max-h-3 rounded-full mt-[-2px] align-middle bg-neutral-300 dark:bg-neutral-400" title="views">loading</span>
+  <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
+  </span>
+
+</span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/mac/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Mac
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%9F%A5%E8%AF%A2/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    查询
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+</section>
+
+  
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\/graph_skeleton\/graph_skeleton.md"
+        var oid_likes = "likes_posts\/graph_skeleton\/graph_skeleton.md"
+      </script>
+      
+      
+      
+      <script type="text/javascript" src="/js/page.min.b06a29d42a4ed16787978e2eee1e8c797b7698db2bc14ccee78f5c80ac566fc996190a73ad80a5e987558474b20b96fa38f7d85b405f165ff72b7b163c5ad11b.js" integrity="sha512-sGop1CpO0WeHl44u7h6MeXt2mNsrwUzO549cgKxWb8mWGQpzrYCl6YdVhHSyC5b6OPfYW0BfFl/3K3sWPFrRGw=="></script>
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/gnn_pt2/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >图神经网络学习笔记（2）</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-06-11 15:36:58 &#43;0800 CST">2024-06-11</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+    <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/tags/"
+            title="">
+            
+            标签
+          </a>
+        </li>
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/authors/"
+            title="">
+            
+            作者
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2024
+      Witchcraft
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.62060bb247f4de2b6dde45903668fefb68d792f365587605177b1227c0cf43588701edaca0cb40e2c8e2789bd5ce67c1d2a215b9fb258c3496a7cd25e7cb5fdf.js" integrity="sha512-YgYLskf03itt3kWQNmj&#43;&#43;2jXkvNlWHYFF3sSJ8DPQ1iHAe2soMtA4sjieJvVzmfB0qIVufsljDSWp80l58tf3w=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+<script type="module">
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+  
+  
+
+  
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyCr3u1oGcqZw50Or63QlnMMty6r-LpziNc",
+    authDomain: "my-github-page-57af1.firebaseapp.com",
+    projectId: "my-github-page-57af1",
+    storageBucket: "my-github-page-57af1.appspot.com",
+    messagingSenderId: "872148441458",
+    appId: "1:872148441458:web:6b03f758713b85a8da65eb",
+    measurementId: "G-ZVEQDKKLC7"
+  };
+
+  
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+
+</html>

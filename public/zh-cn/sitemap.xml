@@ -3,8 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/posts/graph_skeleton/graph_skeleton/</loc>
+    <lastmod>2024-09-20T11:10:15+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-06-11T15:36:58+08:00</lastmod>
+    <lastmod>2024-09-20T11:10:15+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -19,14 +25,8 @@
     />
   </url>
   <url>
-    <loc>http://localhost:1313/posts/gnn_pt2/</loc>
-    <lastmod>2024-06-11T15:36:58+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-06-11T15:36:58+08:00</lastmod>
+    <lastmod>2024-09-20T11:10:15+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -39,6 +39,12 @@
       hreflang="zh-cn"
       href="http://localhost:1313/posts/"
     />
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/gnn_pt2/</loc>
+    <lastmod>2024-06-11T15:36:58+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/funs/</loc>
