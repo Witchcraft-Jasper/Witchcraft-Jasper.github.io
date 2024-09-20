@@ -1,5 +1,5 @@
 +++
-title = 'Graph Skeleton论文阅读'
+title = '图神经网络学习笔记（3）——Graph Skeleton'
 date = 2024-09-20T11:10:15+08:00
 tags = ["机器学习", "图神经网络", "学习笔记"]
 draft = false
