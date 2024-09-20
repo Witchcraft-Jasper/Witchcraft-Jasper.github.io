@@ -2,110 +2,110 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Witchcraft&#39;s space</title>
-    <link>http://localhost:1313/</link>
+    <link>https://witchcraft-jasper.github.io/</link>
     <description>Recent content on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Fri, 20 Sep 2024 11:10:15 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 </copyright>
+    <lastBuildDate>Fri, 20 Sep 2024 11:10:15 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Graph Skeleton论文阅读</title>
-      <link>http://localhost:1313/posts/graph_skeleton/graph_skeleton/</link>
+      <link>https://witchcraft-jasper.github.io/posts/graph_skeleton/</link>
       <pubDate>Fri, 20 Sep 2024 11:10:15 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/graph_skeleton/graph_skeleton/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/graph_skeleton/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/graph_skeleton/feature.webp" />
     </item>
     
     <item>
       <title>图神经网络学习笔记（2）</title>
-      <link>http://localhost:1313/posts/gnn_pt2/</link>
+      <link>https://witchcraft-jasper.github.io/posts/gnn_pt2/</link>
       <pubDate>Tue, 11 Jun 2024 15:36:58 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/gnn_pt2/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/gnn_pt2/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>璀璨宝石牌型分析</title>
-      <link>http://localhost:1313/funs/boardgame/splendor/</link>
+      <link>https://witchcraft-jasper.github.io/funs/boardgame/splendor/</link>
       <pubDate>Mon, 27 May 2024 17:06:53 +0800</pubDate>
       
-      <guid>http://localhost:1313/funs/boardgame/splendor/</guid>
+      <guid>https://witchcraft-jasper.github.io/funs/boardgame/splendor/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/funs/boardgame/splendor/feature.jpeg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/funs/boardgame/splendor/feature.jpeg" />
     </item>
     
     <item>
       <title>Mac版Vscode快捷键速查</title>
-      <link>http://localhost:1313/posts/vscode_tutorial/</link>
+      <link>https://witchcraft-jasper.github.io/posts/vscode_tutorial/</link>
       <pubDate>Tue, 07 May 2024 10:34:21 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/vscode_tutorial/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/vscode_tutorial/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/vscode_tutorial/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/vscode_tutorial/feature.png" />
     </item>
     
     <item>
       <title>Iterm2快捷键速查</title>
-      <link>http://localhost:1313/posts/iterm2_tutorial/</link>
+      <link>https://witchcraft-jasper.github.io/posts/iterm2_tutorial/</link>
       <pubDate>Mon, 06 May 2024 16:25:35 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/iterm2_tutorial/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/iterm2_tutorial/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/iterm2_tutorial/feature.jpeg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/iterm2_tutorial/feature.jpeg" />
     </item>
     
     <item>
       <title>Latex相关符号速查手册</title>
-      <link>http://localhost:1313/posts/latex_symbols/</link>
+      <link>https://witchcraft-jasper.github.io/posts/latex_symbols/</link>
       <pubDate>Thu, 11 Apr 2024 17:55:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/latex_symbols/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/latex_symbols/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/latex_symbols/feature.webp" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/latex_symbols/feature.webp" />
     </item>
     
     <item>
       <title>图神经网络学习笔记（1）</title>
-      <link>http://localhost:1313/posts/gnn_pt1/</link>
+      <link>https://witchcraft-jasper.github.io/posts/gnn_pt1/</link>
       <pubDate>Sun, 07 Apr 2024 23:41:06 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/gnn_pt1/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/gnn_pt1/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/gnn_pt1/feature.webp" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/gnn_pt1/feature.webp" />
     </item>
     
     <item>
       <title>使用MacOS为本地及服务器配置jupyter及zsh</title>
-      <link>http://localhost:1313/posts/build_jupyter_zsh/</link>
+      <link>https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/</link>
       <pubDate>Wed, 03 Apr 2024 19:40:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/build_jupyter_zsh/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/build_jupyter_zsh/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/build_jupyter_zsh/featured.png" />
     </item>
     
     <item>
       <title>Markdown语法兼容性测试</title>
-      <link>http://localhost:1313/posts/markdown_test/</link>
+      <link>https://witchcraft-jasper.github.io/posts/markdown_test/</link>
       <pubDate>Wed, 03 Apr 2024 17:08:21 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/markdown_test/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/markdown_test/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/markdown_test/featured.jpeg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/markdown_test/featured.jpeg" />
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>http://localhost:1313/posts/first_page/</link>
+      <link>https://witchcraft-jasper.github.io/posts/first_page/</link>
       <pubDate>Wed, 03 Apr 2024 15:36:21 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/first_page/</guid>
+      <guid>https://witchcraft-jasper.github.io/posts/first_page/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/first_page/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://witchcraft-jasper.github.io/posts/first_page/feature.png" />
     </item>
     
   </channel>

@@ -2,78 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Witchcraft&#39;s space</title>
-    <link>http://localhost:1313/en/tags/</link>
+    <link>https://witchcraft-jasper.github.io/en/tags/</link>
     <description>Recent content in Tags on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Thu, 11 Apr 2024 17:55:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 </copyright>
+    <lastBuildDate>Thu, 11 Apr 2024 17:55:39 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Latex</title>
-      <link>http://localhost:1313/en/tags/latex/</link>
+      <link>https://witchcraft-jasper.github.io/en/tags/latex/</link>
       <pubDate>Thu, 11 Apr 2024 17:55:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/tags/latex/</guid>
+      <guid>https://witchcraft-jasper.github.io/en/tags/latex/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Markdown</title>
-      <link>http://localhost:1313/en/tags/markdown/</link>
+      <link>https://witchcraft-jasper.github.io/en/tags/markdown/</link>
       <pubDate>Thu, 11 Apr 2024 17:55:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/tags/markdown/</guid>
+      <guid>https://witchcraft-jasper.github.io/en/tags/markdown/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Query</title>
-      <link>http://localhost:1313/en/tags/query/</link>
+      <link>https://witchcraft-jasper.github.io/en/tags/query/</link>
       <pubDate>Thu, 11 Apr 2024 17:55:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/tags/query/</guid>
+      <guid>https://witchcraft-jasper.github.io/en/tags/query/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Env Config</title>
-      <link>http://localhost:1313/en/tags/env-config/</link>
+      <link>https://witchcraft-jasper.github.io/en/tags/env-config/</link>
       <pubDate>Wed, 03 Apr 2024 19:40:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/tags/env-config/</guid>
+      <guid>https://witchcraft-jasper.github.io/en/tags/env-config/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Jupyter</title>
-      <link>http://localhost:1313/en/tags/jupyter/</link>
+      <link>https://witchcraft-jasper.github.io/en/tags/jupyter/</link>
       <pubDate>Wed, 03 Apr 2024 19:40:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/tags/jupyter/</guid>
+      <guid>https://witchcraft-jasper.github.io/en/tags/jupyter/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/en/tags/linux/</link>
+      <link>https://witchcraft-jasper.github.io/en/tags/linux/</link>
       <pubDate>Wed, 03 Apr 2024 19:40:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/tags/linux/</guid>
+      <guid>https://witchcraft-jasper.github.io/en/tags/linux/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Mac</title>
-      <link>http://localhost:1313/en/tags/mac/</link>
+      <link>https://witchcraft-jasper.github.io/en/tags/mac/</link>
       <pubDate>Wed, 03 Apr 2024 19:40:20 +0800</pubDate>
       
-      <guid>http://localhost:1313/en/tags/mac/</guid>
+      <guid>https://witchcraft-jasper.github.io/en/tags/mac/</guid>
       <description></description>
       
     </item>
