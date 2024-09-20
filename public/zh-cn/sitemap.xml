@@ -3,12 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://witchcraft-jasper.github.io/posts/graph_skeleton/</loc>
-    <lastmod>2024-09-20T11:10:15+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://witchcraft-jasper.github.io/</loc>
     <lastmod>2024-09-20T11:10:15+08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -23,6 +17,12 @@
       hreflang="zh-cn"
       href="https://witchcraft-jasper.github.io/"
     />
+  </url>
+  <url>
+    <loc>https://witchcraft-jasper.github.io/posts/graph_skeleton/</loc>
+    <lastmod>2024-09-20T11:10:15+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://witchcraft-jasper.github.io/posts/</loc>
