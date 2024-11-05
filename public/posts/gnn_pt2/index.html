@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -15,7 +15,7 @@
   <meta name="keywords" content="机器学习, 图神经网络, 学习笔记, " />
   
   
-  <link rel="canonical" href="https://witchcraft-jasper.github.io/posts/gnn_pt2/" />
+  <link rel="canonical" href="http://localhost:1313/posts/gnn_pt2/" />
   
   
   
@@ -71,9 +71,10 @@
   <meta property="og:title" content="图神经网络学习笔记（2）——GAT" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://witchcraft-jasper.github.io/posts/gnn_pt2/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/gnn_pt2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-06-11T15:36:58+08:00" />
 <meta property="article:modified_time" content="2024-06-11T15:36:58+08:00" />
+
 
 
   <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="图神经网络学习笔记（2）——GAT"/>
@@ -90,7 +91,7 @@
     
     
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/witchcraft-jasper.github.io\/posts\/gnn_pt2\/",
+    "url" : "http:\/\/localhost:1313\/posts\/gnn_pt2\/",
     "author" : {
       "@type": "Person",
       "name": ""
@@ -104,7 +105,7 @@
     "keywords": ["机器学习","图神经网络","学习笔记"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "173"
+    "wordCount": "174"
   }]
   </script>
 
@@ -550,7 +551,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-06-11T15:36:58&#43;08:00">2024-06-11</time><span class="px-2 text-primary-500">&middot;</span><span>173 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2024-06-11T15:36:58&#43;08:00">2024-06-11</time><span class="px-2 text-primary-500">&middot;</span><span>174 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -736,6 +737,43 @@
       <div class="min-w-0 min-h-0 max-w-fit">
         
         
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5" >
+    
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        图神经网络 - 这篇文章属于一个选集。
+    </summary>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/posts/gnn_pt1/">
+            § 1: 图神经网络学习笔记（1）——GCN
+        </a>
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        § 2: 本文
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/posts/graph_skeleton/">
+            § 3: 图神经网络学习笔记（3）——Graph Skeleton
+        </a>
+    </div>
+    
+    
+
+
+</details>
+
 
 
         <div class="article-content max-w-prose mb-20">
@@ -755,6 +793,7 @@
 <p>论文：https://arxiv.org/pdf/1710.10903</p>
 </blockquote>
 <p>图注意网络（Graph Attention Networks，GAT）是一种用于图结构数据的神经网络模型，通过引入注意力机制，能够有效地捕捉节点间的关系。GAT由Petar Veličković等人在2017年提出，是在图卷积网络（Graph Convolutional Networks，GCN）的基础上发展而来的。</p>
+<p>TODO&hellip;</p>
 
           
           
@@ -764,6 +803,43 @@
         
 
         
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+    
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        图神经网络 - 这篇文章属于一个选集。
+    </summary>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/posts/gnn_pt1/">
+            § 1: 图神经网络学习笔记（1）——GCN
+        </a>
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        § 2: 本文
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/posts/graph_skeleton/">
+            § 3: 图神经网络学习笔记（3）——Graph Skeleton
+        </a>
+    </div>
+    
+    
+
+
+</details>
+
         
 
         
@@ -786,7 +862,7 @@
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/gnn_pt1/">图神经网络学习笔记（1）——GNN</div>
+          href="/posts/gnn_pt1/">图神经网络学习笔记（1）——GCN</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -1358,7 +1434,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="https://witchcraft-jasper.github.io/"
+  data-url="http://localhost:1313/"
   style="z-index:500"
 >
   <div

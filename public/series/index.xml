@@ -2,18 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Witchcraft&#39;s space</title>
-    <link>https://witchcraft-jasper.github.io/series/</link>
+    <link>http://localhost:1313/series/</link>
     <description>Recent content in Series on Witchcraft&#39;s space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 </copyright>
-    <lastBuildDate>Wed, 03 Apr 2024 17:08:21 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Sep 2024 11:10:15 +0800</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图神经网络</title>
+      <link>http://localhost:1313/series/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Fri, 20 Sep 2024 11:10:15 +0800</pubDate>
+      
+      <guid>http://localhost:1313/series/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>测试用内容</title>
-      <link>https://witchcraft-jasper.github.io/series/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%86%85%E5%AE%B9/</link>
+      <link>http://localhost:1313/series/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%86%85%E5%AE%B9/</link>
       <pubDate>Wed, 03 Apr 2024 17:08:21 +0800</pubDate>
       
-      <guid>https://witchcraft-jasper.github.io/series/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%86%85%E5%AE%B9/</guid>
+      <guid>http://localhost:1313/series/%E6%B5%8B%E8%AF%95%E7%94%A8%E5%86%85%E5%AE%B9/</guid>
       <description></description>
       
     </item>

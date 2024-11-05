@@ -3,6 +3,9 @@ title = '图神经网络学习笔记（3）——Graph Skeleton'
 date = 2024-09-20T11:10:15+08:00
 tags = ["机器学习", "图神经网络", "学习笔记"]
 draft = false
+heroStyle = "basic"
+series = ["图神经网络"]
+series_order = 3
 +++
 
 # Graph-Skeleton: ∼1% Nodes are Sufficient to Represent Billion-Scale Graph论文阅读

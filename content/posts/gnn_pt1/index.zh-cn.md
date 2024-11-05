@@ -1,8 +1,10 @@
 +++
-title = '图神经网络学习笔记（1）——GNN'
+title = '图神经网络学习笔记（1）——GCN'
 date = 2024-04-07T23:41:06+08:00
 tags = ["机器学习", "图神经网络", "学习笔记"]
 draft = false
+series = ["图神经网络"]
+series_order = 1
 +++
 
 
