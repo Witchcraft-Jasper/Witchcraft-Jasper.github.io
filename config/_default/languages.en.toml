@@ -11,7 +11,7 @@ title = "Witchcraft's space"
   logo = "img/blowfish_logo_transparent.png"
   description = "A powerful, lightweight theme for Hugo."
 
-[author]
+[params.author]
   name = "Witchcraft"
   image = "/img/author.jpg"
   headline = "Pale blue dot"
