@@ -3,9 +3,10 @@
     src: url('/fonts/Noto Serif SC.otf');
 }
 
- /* html:lang(zh-cn) {
+html:lang(zh-cn) div.lead {
     font-family: cn_font;
-} */
+    font-size: 14pt;
+}
 
 
 .center-image {
