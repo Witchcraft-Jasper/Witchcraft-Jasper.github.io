@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Witchcraft</copyright>
-    <lastBuildDate>Fri, 20 Sep 2024 11:10:15 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Dec 2024 16:40:41 +0800</lastBuildDate><atom:link href="https://witchcraft-jasper.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>火焰纹章系列作品一览</title>
+      <link>https://witchcraft-jasper.github.io/funs/videogame/fire_emblem/</link>
+      <pubDate>Wed, 18 Dec 2024 16:40:41 +0800</pubDate>
+      
+      <guid>https://witchcraft-jasper.github.io/funs/videogame/fire_emblem/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>图神经网络学习笔记（3）——Graph Skeleton</title>
