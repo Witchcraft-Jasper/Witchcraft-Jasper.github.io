@@ -86,3 +86,43 @@ $$
 <img src="img/p9.png" alt="邻接矩阵归一化" class="center-image"/>
 
 这就是邻接矩阵的归一化。
+
+
+### pytorch实现
+
+在实际使用GCN时只需要理解如下公式即可：
+
+$$
+H^{(k+1)}=\sigma(\tilde AH^{(k)}W_k^T+H^{(k)}B_k^T)
+$$
+
+从公式中可以看出，GCN接受的输入为X和归一化邻接矩阵，经过聚合周围节点信息和线性变换之后得到输出。以下是一个简易的代码实现：
+
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+
+class GCNLayer(nn.Module):
+    def __init__(self, in_channels, out_channels):
+        super(GCNLayer, self).__init__()
+        self.linear = nn.Linear(in_channels, out_channels)
+        
+    def forward(self, x, adj):
+        """
+        x: node features (B, N, D)
+        adj: adjacency matrix (N, N)
+        """
+        # GCN layer implementation: x' = A * x * W
+        # x = torch.matmul(adj, x)  # A * x
+        
+        # 初始化输出张量
+        output = torch.zeros(batch_size, block_size, self.linear.out_features, device=x.device)
+        # 计算 A * X
+        output = torch.einsum('nd,bdh->bnh', adj, x)
+        # 线性变换 (W)
+        output = self.linear(output)
+        return output
+```
